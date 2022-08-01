@@ -1,13 +1,16 @@
 import { extendTheme } from '@chakra-ui/react';
 import colors from 'theme/colors';
+import Text from 'theme/text';
+import Heading from 'theme/heading';
 // import Button from './components/button';
 
 const customTheme = {
   initialColorMode: 'light',
   useSystemColorMode: false,
   fonts: {
-    heading: "'Montserrat', Sans-serif",
-    body: "'Montserrat', Sans-serif",
+    heading:
+      "'Noto Sans TC',-apple-system,'Montserrat',Arial,Roboto,PingFang TC, Sans-serif",
+    body: "-apple-system, 'Montserrat',Arial,Roboto,'Noto Sans TC',PingFang TC, Sans-serif",
   },
   styles: {
     global: {
@@ -17,16 +20,10 @@ const customTheme = {
     },
   },
   colors,
-  // colors: {
-  //   ...colors,
-  //   brand: {
-  //     500: '#3DB9FF',
-  //     600: '#186DD1',
-  //     700: '#0A2C54',
-  //   },
-  //   grass: '#61CE70',
-  // },
+
   components: {
+    Text,
+    Heading,
     // Button,
     Switch: {
       baseStyle: {

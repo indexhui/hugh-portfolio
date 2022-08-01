@@ -11,11 +11,15 @@ import 'swiper/css/pagination';
 const BannerSwiper = props => {
   const { bannerList } = props;
   return (
-    <Flex w="50%" borderRadius="0 10px 10px 0" overflow="hidden">
+    <Flex
+      w={{ base: '100%', lg: '50%' }}
+      borderRadius={{ base: '0', lg: '0 10px 10px 0' }}
+      overflow="hidden"
+    >
       <Swiper
-        pagination={{
-          type: 'progressbar',
-        }}
+        // pagination={{
+        //   type: 'progressbar',
+        // }}
         loop={true}
         navigation={true}
         autoplay={{
@@ -32,7 +36,13 @@ const BannerSwiper = props => {
       >
         {bannerList.map((item, index) => (
           <SwiperSlide key={index + 'banner'}>
-            <Image h="100%" w="100%" objectFit="cover" src={item} />
+            <Image
+              h="100%"
+              w="100%"
+              maxH="450px"
+              objectFit="cover"
+              src={item}
+            />
           </SwiperSlide>
         ))}
         {/* <SwiperSlide>Slide 1</SwiperSlide>

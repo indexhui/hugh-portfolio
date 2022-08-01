@@ -1,50 +1,60 @@
-import { Flex, Text, VStack, Heading } from '@chakra-ui/react';
+import { Flex, Text, VStack, Heading, chakra } from '@chakra-ui/react';
 import BannerSwiper from 'components/BannerSwiper';
 import banner01 from 'assets/images/realengine/banner01.jpg';
+import banner02 from 'assets/images/realengine/banner02.jpg';
 
-const bannerList = [banner01, banner01, banner01];
+const bannerList = [banner01, banner02, banner01];
 
 const Intro = () => {
   return (
-    <Flex>
-      <BannerSwiper bannerList={bannerList} />
-      <VStack w="37.5%" align="flex-start" px="32px" spacing="20px">
-        <Heading size="lg">IP 桌遊募資平台</Heading>
-        <Text>Real Engine 真實引擎</Text>
-        <VStack spacing="2px" align="flex-start">
-          <Text color="grey.600" fontSize="14px">
-            Background
-          </Text>
-          <Text>
-            綿羊犬有著 10 年桌上遊戲品牌經驗，這次與有著豐富資訊設計的經驗 Re:
-            lab ，打造專屬給IP創作者的桌遊牧資平台。
-          </Text>
-        </VStack>
-        <VStack spacing="2px" align="flex-start">
-          <Text color="grey.600" fontSize="14px">
-            專案時辰 / 時間
-          </Text>
-          <Text>3個月 / November 2021 - January 2022</Text>
-        </VStack>
-        <VStack spacing="2px" align="flex-start">
-          <Text color="grey.600" fontSize="14px">
-            團隊成員
-          </Text>
-          <Text>PM XXX ,Developer Renddie, Product Designer Hugh</Text>
-        </VStack>
-        <VStack spacing="2px" align="flex-start">
-          <Text color="grey.600" fontSize="14px">
-            我的腳色
-          </Text>
-          <Text>Product Designer</Text>
-        </VStack>
-        <VStack spacing="2px" align="flex-start">
-          <Text color="grey.600" fontSize="14px">
-            負責項目
-          </Text>
-          <Text>架構規劃、功能流程規劃、設計完稿、工程交付</Text>
-        </VStack>
-      </VStack>
+    <Flex
+      wrap="wrap"
+      direction="column"
+      bgColor="blue.800"
+      py={{ base: '20px', lg: '32px' }}
+      w="100%"
+    >
+      <Heading variant="banner" textAlign="center" pb="24px">
+        <chakra.span fontFamily="'Montserrat'">Real Engine </chakra.span>
+        真實引擎
+      </Heading>
+      <Flex wrap="wrap" w="100%" align="center">
+        <BannerSwiper bannerList={bannerList} />
+        <Flex
+          w={{ base: '100%', lg: '37.5%' }}
+          justify={{ base: 'flex-start', lg: 'center' }}
+        >
+          <VStack
+            py={{ base: '20px', lg: '0' }}
+            // w="100%"
+            // w={{ base: '100%', lg: '37.5%' }}
+            align="flex-start"
+            px="22px"
+            spacing="20px"
+          >
+            <VStack spacing="2px" align="flex-start">
+              <Text variant="bannerTitle">專案時辰 / 時間</Text>
+              <Text variant="bannerText">
+                3個月 / November 2021 - January 2022
+              </Text>
+            </VStack>
+            <VStack spacing="2px" align="flex-start">
+              <Text variant="bannerTitle">我的角色</Text>
+              <Text variant="bannerText">產品設計師</Text>
+            </VStack>
+            <VStack spacing="2px" align="flex-start">
+              <Text variant="bannerTitle">團隊組成</Text>
+              <Text variant="bannerText">PO x1, Developer x1 ,Designer x1</Text>
+            </VStack>
+            <VStack spacing="2px" align="flex-start">
+              <Text variant="bannerTitle">工作範疇</Text>
+              <Text variant="bannerText">
+                架構規劃、功能流程規劃、設計完稿、工程交付
+              </Text>
+            </VStack>
+          </VStack>
+        </Flex>
+      </Flex>
     </Flex>
   );
 };

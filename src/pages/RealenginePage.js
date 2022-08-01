@@ -1,6 +1,7 @@
 import { Flex, Text, VStack, Heading } from '@chakra-ui/react';
 
 import Intro from 'components/realengine/Intro';
+import Overview from 'components/realengine/Overview';
 import Process from 'components/realengine/Process';
 import Challenge from 'components/realengine/Challenge';
 import Architecture from 'components/realengine/Architecture';
@@ -13,6 +14,7 @@ export function RealenginePage() {
   return (
     <Flex bgColor="grey.100" direction="column">
       <Intro />
+      <Overview />
       <Process />
       <Challenge />
       <Architecture />
