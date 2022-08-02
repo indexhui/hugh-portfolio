@@ -32,27 +32,31 @@ const Text = {
         fontSize: '17px',
       },
     },
+    smallTitle: {
+      color: 'grey.650',
+      fontWeight: '300',
+      fontSize: '16px',
+      '@media(max-width: 40em)': {
+        fontSize: '15px',
+      },
+    },
     body: {
       color: 'grey.700',
       fontSize: '16px',
       fontWeight: '300',
       lineHeight: '27px',
       letterSpacing: '0.05em',
+      '@media(max-width: 40em)': {
+        fontSize: '14px',
+        lineHeight: '21px',
+      },
     },
-    button1: {
-      fontSize: '18px',
-      lineHeight: '26px',
-      letterSpacing: '0.005em',
-    },
-    button2: {
-      fontSize: '15px',
-      lineHeight: '21px',
-      letterSpacing: '0.01em',
-    },
-    button3: {
-      fontSize: '10px',
-      lineHeight: '14px',
-      letterSpacing: '0.01em',
+    text02: {
+      color: 'grey.700',
+      fontSize: '14px',
+      '@media(max-width: 40em)': {
+        fontSize: '13px',
+      },
     },
     footer: {
       fontSize: '12px',

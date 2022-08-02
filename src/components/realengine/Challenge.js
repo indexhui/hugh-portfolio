@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 
 import {
   Flex,
+  Box,
   Text,
   VStack,
   Heading,
@@ -30,7 +31,7 @@ const challengeList = [
     img: challenge01,
   },
   {
-    title: '如果讓桌遊資訊和特色融入募資的介紹區域',
+    title: '如合讓桌遊特色融入募資基本介紹上',
     img: challenge02,
   },
   {
@@ -59,70 +60,87 @@ const Challenge = () => {
 
   return (
     <Flex justify="center" align="center" direction="column" py="40px">
-      <Flex w="75%">
-        <Flex w="50%" direction="column" justify="center">
-          <Heading as="h4" size="xl" pb="24px">
-            Challenge
-          </Heading>
-          <Flex>
-            <VStack align="flex-start" spacing="16px">
-              {challengeList.map((item, index) => (
-                <Text
-                  fontSize="22px"
-                  color={currentIndex === index ? 'grey.800' : 'grey.600'}
-                  fontWeight="600"
-                  pb="5px"
-                  key={index + 'challenge'}
-                  borderBottom={
-                    currentIndex === index
-                      ? '2px solid #196E79'
-                      : '2px solid rgba(0,0,0,0)'
-                  }
-                  onClick={() => handleOnSetSwiper(index)}
-                  cursor="pointer"
-                >
-                  {item.title}
-                </Text>
-              ))}
-            </VStack>
-          </Flex>
+      <Flex w={{ base: '100%', lg: '75%' }} direction="column" px="22px">
+        <Flex w="100%" justify="space-between" align="center" mb="24px">
+          <Text variant="title">Challenge</Text>
+          <Box w="120px" h="1px" bgColor="grey.800"></Box>
         </Flex>
-        <Flex w="50%" overflow="hidden" rounded="md">
-          <AspectRatio w="100%" ratio={5 / 3}>
-            <Swiper
-              onSwiper={swiper => {
-                swiperRef.current = swiper;
-              }}
-              slidesPerView={1}
-              effect={'fade'}
-              modules={[Autoplay, EffectFade]}
-              className="mySwiper"
-              onSlideChange={handleOnSlideChange}
-              // activeIndexChange={handleOnSlideChange}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              speed={1000}
-              loop={true}
-            >
-              <SwiperSlide>
-                <AspectRatio w="100%" ratio={5 / 3}>
-                  <Image src={challenge01} />
-                </AspectRatio>
-              </SwiperSlide>
-              <SwiperSlide>
-                <AspectRatio w="100%" ratio={5 / 3}>
-                  <Image src={challenge02} />
-                </AspectRatio>
-              </SwiperSlide>
-              <SwiperSlide>
-                <AspectRatio w="100%" ratio={5 / 3}>
-                  <Image src={challenge03} />
-                </AspectRatio>
-              </SwiperSlide>
-            </Swiper>
-          </AspectRatio>
+        <Text variant="body" color="grey.650">
+          為了讓平台更容易去發揮創作者與桌遊產品的優勢，
+          <br />
+          我們設定了三項挑戰
+        </Text>
+        <Flex w="100%" wrap="wrap" pt="32px">
+          <Flex
+            w={{ base: '100%', lg: '50%' }}
+            pr={{ base: '0', lg: '24px' }}
+            direction="column"
+            justify="center"
+          >
+            <Flex>
+              <VStack
+                pb="24px"
+                align="flex-start"
+                spacing={{ base: '8px', lg: '12px' }}
+              >
+                {challengeList.map((item, index) => (
+                  <Text
+                    variant="title"
+                    color={currentIndex === index ? 'blue.700' : 'grey.550'}
+                    fontWeight={currentIndex === index ? '400' : '300'}
+                    pb="5px"
+                    key={index + 'challenge'}
+                    // borderBottom={
+                    //   currentIndex === index
+                    //     ? '2px solid #196E79'
+                    //     : '2px solid rgba(0,0,0,0)'
+                    // }
+                    onClick={() => handleOnSetSwiper(index)}
+                    cursor="pointer"
+                  >
+                    {item.title}
+                  </Text>
+                ))}
+              </VStack>
+            </Flex>
+          </Flex>
+          <Flex w={{ base: '100%', lg: '50%' }} overflow="hidden" rounded="md">
+            <AspectRatio w="100%" ratio={5 / 3}>
+              <Swiper
+                onSwiper={swiper => {
+                  swiperRef.current = swiper;
+                }}
+                slidesPerView={1}
+                effect={'fade'}
+                modules={[Autoplay, EffectFade]}
+                className="mySwiper"
+                onSlideChange={handleOnSlideChange}
+                // activeIndexChange={handleOnSlideChange}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                speed={1000}
+                loop={true}
+              >
+                <SwiperSlide>
+                  <AspectRatio w="100%" ratio={5 / 3}>
+                    <Image src={challenge01} />
+                  </AspectRatio>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <AspectRatio w="100%" ratio={5 / 3}>
+                    <Image src={challenge02} />
+                  </AspectRatio>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <AspectRatio w="100%" ratio={5 / 3}>
+                    <Image src={challenge03} />
+                  </AspectRatio>
+                </SwiperSlide>
+              </Swiper>
+            </AspectRatio>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
