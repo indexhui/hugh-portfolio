@@ -4,7 +4,7 @@ const Overview = () => {
     <Flex
       bg="grey.300"
       px="22px"
-      py={{ base: '20px', lg: '32px' }}
+      py={{ base: '32px', lg: '48px' }}
       w="100%"
       justify="center"
     >

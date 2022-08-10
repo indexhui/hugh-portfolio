@@ -1,5 +1,7 @@
 import { Flex, Text, VStack, Heading, Box } from '@chakra-ui/react';
 
+import SectionTitle from 'components/SectionTitle';
+
 const Process = () => {
   return (
     <Flex
@@ -22,16 +24,12 @@ const Process = () => {
         direction="column"
         align="center"
       >
-        <Flex
-          w="100%"
-          px="22px"
-          justify="space-between"
-          align="center"
+        <SectionTitle
+          title="設計流程"
+          isWhite={true}
+          px={{ base: '22px', lg: '0' }}
           mb="40px"
-        >
-          <Text variant="title">設計流程</Text>
-          <Box w="120px" h="1px" bgColor="white"></Box>
-        </Flex>
+        />
         {/* <Heading
           letterSpacing=".1em"
           as="h3"

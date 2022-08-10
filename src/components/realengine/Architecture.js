@@ -4,7 +4,11 @@ import architecture from 'assets/images/realengine/architecture.jpg';
 
 const Architecture = () => {
   return (
-    <Flex justify="center" py={{ base: '20px', lg: '48px' }}>
+    <Flex
+      justify="center"
+      py={{ base: '20px', lg: '48px' }}
+      pb={{ base: '32px', lg: 0 }}
+    >
       <Flex w={{ base: '100%', lg: '75%' }} direction="column" px="22px">
         <Flex w="100%" justify="space-between" align="center" mb="24px">
           <Text variant="title">Structure</Text>
@@ -26,6 +30,7 @@ const Architecture = () => {
               maxW="500px"
               color="grey.800"
               fontSize={{ base: '22px', lg: '16px' }}
+              pb={{ base: '12px', lg: '0' }}
             >
               確認挑戰和專案核心目標後，研究目前市場美日韓台募資平台，功能和趨勢。盤點整個平台的資訊架構，接著著手設計
             </Text>

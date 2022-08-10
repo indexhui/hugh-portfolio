@@ -33,11 +33,22 @@ const Text = {
       },
     },
     smallTitle: {
-      color: 'grey.650',
-      fontWeight: '300',
-      fontSize: '16px',
+      color: 'grey.600',
+      fontWeight: '400',
+      fontSize: '17px',
       '@media(max-width: 40em)': {
         fontSize: '15px',
+      },
+    },
+    bodyLg: {
+      color: 'grey.700',
+      fontSize: '18px',
+      fontWeight: '400',
+      lineHeight: '32px',
+      letterSpacing: '0.05em',
+      '@media(max-width: 40em)': {
+        fontSize: '15px',
+        lineHeight: '21px',
       },
     },
     body: {

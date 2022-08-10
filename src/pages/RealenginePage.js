@@ -19,7 +19,7 @@ export function RealenginePage() {
       <Challenge />
       <Architecture />
       <DesignStrategy />
-      <UserInterface />
+      {/* <UserInterface /> */}
       <Outcome />
       <FollowUp />
     </Flex>

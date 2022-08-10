@@ -53,8 +53,8 @@ const DesignStrategy = () => {
           <Text variant="title">Evaluation & Iterations</Text>
           <Box w="120px" h="1px" bgColor="grey.800"></Box>
         </Flex>
-        <Flex w="100%" justify="center" py="40px">
-          <VStack spacing="24px" pt="20px" w="100%">
+        <Flex w="100%" justify="center" py="24px" pt="0">
+          <VStack spacing="24px" w="100%">
             <VStack spacing="8px">
               <Text variant="smallTitle">桌遊特色介紹模板</Text>
               <Text
