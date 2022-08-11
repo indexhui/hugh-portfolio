@@ -3,3 +3,4 @@ export * from './WorkPage';
 export * from './PortalyPage';
 export * from './RealenginePage';
 export * from './CrosspointPage';
+export * from './AboutPage';

@@ -4,6 +4,7 @@ const SectionContainer = props => {
   const { bgColor, align, ...rest } = props;
   return (
     <Flex
+      w="100%"
       justify="center"
       align="center"
       direction="column"

@@ -8,6 +8,7 @@ import {
   RealenginePage,
   CrosspointPage,
   PortalyPage,
+  AboutPage,
 } from 'pages';
 
 const Wrapper = ({ children }) => {
@@ -32,6 +33,7 @@ const Router = () => {
           <Route path="/crosspoint" element={<CrosspointPage />} />
           <Route path="/portaly" element={<PortalyPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Wrapper>
     </AnimatePresence>
