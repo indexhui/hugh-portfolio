@@ -19,12 +19,12 @@ const CoreLine = props => {
     visible: custom => ({
       opacity: 1,
       transition: {
-        delay: (custom.delay || 0) * 2,
-        duration: 1.5,
+        delay: (custom.delay || 0) * 1,
+        duration: 0.5,
         type: 'tween',
       },
     }),
-    hidden: custom => ({ opacity: 0 }),
+    hidden: custom => ({ opacity: 0.2 }),
   };
 
   return (
@@ -43,7 +43,7 @@ const CoreLine = props => {
         variants={variants}
         w="100%"
         height="100%"
-        background="linear-gradient(-45deg, #ffffff20, #fff, #ffffff50)"
+        background="linear-gradient(-45deg, #ffffff20, #ffffffcc, #ffffff50)"
         bgSize=" 200% 200%"
       ></MotionBox>
     </MotionBox>
@@ -86,7 +86,7 @@ const ValueCard = props => {
 
 const Value = () => {
   return (
-    <Flex bgColor="blue.600">
+    <Flex bgColor="blue.700">
       <SectionContainer>
         <SectionTitle title="My value" isWhite={true} />
         <Flex w="100%" px="80px">
@@ -94,7 +94,6 @@ const Value = () => {
             <ValueCore />
           </Flex>
           <VStack w="60%" align="flex-start" spacing="100px">
-            <ValueCard />
             <ValueCard />
             <ValueCard />
             <ValueCard />

@@ -93,7 +93,7 @@ const SelfIntroduction = () => {
       position="relative"
       bgColor="grey.400"
       overflow="hidden"
-      h="550px"
+      h="650px"
     >
       <Decoration />
       <RightHero />
