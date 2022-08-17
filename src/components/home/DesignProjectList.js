@@ -19,7 +19,7 @@ const projectList = [
     title: 'Crosspoint  AI 體態分析 ',
     tag: 'App Design, UI/UX Design, Prototyping, User Research',
     img: project02,
-    link: '/realengine',
+    link: '/crosspoint',
     isNeedPassword: false,
   },
   {
