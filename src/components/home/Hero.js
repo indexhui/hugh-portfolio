@@ -70,9 +70,7 @@ const Hero = () => {
             color={bgIsDark ? 'gray.200' : '#222'}
           >
             <VStack spacing="12px" align="left">
-              <Heading size="lg" col>
-                嗨 我是 Hugh
-              </Heading>
+              <Heading size="lg">嗨 我是 Hugh</Heading>
               <Heading size="lg">
                 是位喜歡透過實作
                 <br />
@@ -87,8 +85,7 @@ const Hero = () => {
             </VStack>
           </Flex>
           <Flex opacity={bgIsDark ? '0' : '1'}>
-            {' '}
-            Start desing and create digital since 2016
+            Start design and create digital since 2016
           </Flex>
         </Flex>
         <MotionImage

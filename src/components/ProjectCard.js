@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const MotionImage = motion(Image);
 
 const ProjectCard = props => {
+  const { isNeedPassword } = props;
   const variants = {
     visible: {
       opacity: 1,
@@ -21,7 +22,7 @@ const ProjectCard = props => {
   };
 
   return (
-    <Flex w="100%" direction={{ baseL: 'column', lg: 'row' }} align="center">
+    <Flex w="100%" direction={{ base: 'column', lg: 'row' }} align="center">
       <Flex w="50%" as={RouterLink} to={props.link}>
         <AspectRatio w="100%" ratio={5 / 3}>
           <Flex w="100%" bgColor="#EDEEF0" borderRadius="md" overflow="hidden">
@@ -47,6 +48,7 @@ const ProjectCard = props => {
         </Text>
         <Text color="grey.500">{props.tag}</Text>
         <Text>{props.tag}</Text>
+        <Text>{isNeedPassword ? '需要密碼' : ''}</Text>
       </VStack>
     </Flex>
   );

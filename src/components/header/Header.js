@@ -12,7 +12,6 @@ const Header = props => {
   const [isShow, setIsShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
-  console.log(location);
 
   const variants = {
     open: { opacity: 1, y: 0 },
