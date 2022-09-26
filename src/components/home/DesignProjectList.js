@@ -4,7 +4,7 @@ import ProjectCard from 'components/ProjectCard';
 
 import project01 from 'assets/images/project01.jpg';
 import project02 from 'assets/images/project02.png';
-import project03 from 'assets/images/project03.png';
+import project03 from 'assets/images/project03.jpg';
 
 const projectList = [
   {

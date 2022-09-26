@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import colors from 'theme/colors';
 import Text from 'theme/text';
 import Heading from 'theme/heading';
+import Link from 'theme/link';
 // import Button from './components/button';
 
 const customTheme = {
@@ -24,6 +25,7 @@ const customTheme = {
   components: {
     Text,
     Heading,
+    Link,
     // Button,
     Switch: {
       baseStyle: {
@@ -34,21 +36,21 @@ const customTheme = {
         },
       },
     },
-    Link: {
-      baseStyle: {
-        _hover: {
-          textDecoration: 'none',
-          color: 'grey.500',
-        },
-        // _active: {
-        //   outline: '0px',
-        // },
-        _focus: {
-          outline: '0px',
-          boxShadow: 'unset',
-        },
-      },
-    },
+    // Link: {
+    //   baseStyle: {
+    //     _hover: {
+    //       textDecoration: 'none',
+    //       color: 'grey.500',
+    //     },
+    //     // _active: {
+    //     //   outline: '0px',
+    //     // },
+    //     _focus: {
+    //       outline: '0px',
+    //       boxShadow: 'unset',
+    //     },
+    //   },
+    // },
   },
 };
 

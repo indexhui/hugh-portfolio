@@ -52,7 +52,7 @@ const Text = {
       },
     },
     body: {
-      color: 'grey.700',
+      color: 'gray.800',
       fontSize: '16px',
       fontWeight: '300',
       lineHeight: '27px',
