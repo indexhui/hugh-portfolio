@@ -3,6 +3,8 @@ import OverviewSection from 'components/layouts/OverviewSection';
 import ProblemDiscovery from 'components/portaly/ProblemDiscovery';
 import DefineRequirement from 'components/portaly/DefineRequirement';
 import Solution from 'components/portaly/Solution';
+import Iterations from 'components/portaly/Iterations';
+import Outcome from 'components/portaly/Outcome';
 
 // import banner0 from 'assets/images/portaly/banner01.png';
 import banner01 from 'assets/images/portaly/banner01.jpg';
@@ -10,6 +12,7 @@ import banner02 from 'assets/images/portaly/banner02.jpg';
 import banner03 from 'assets/images/portaly/banner03.jpg';
 
 const title = { en: 'Portaly', zh: '傳送門' };
+const subTitle = 'Link-in-Bio 輕型個人網站';
 const bannerList = [banner01, banner02, banner03];
 const introduction = [
   {
@@ -40,6 +43,7 @@ export function PortalyPage() {
     <>
       <IntroSection
         title={title}
+        subTitle={subTitle}
         bannerList={bannerList}
         introduction={introduction}
       />
@@ -47,6 +51,8 @@ export function PortalyPage() {
       <ProblemDiscovery />
       <DefineRequirement />
       <Solution />
+      <Iterations />
+      <Outcome />
     </>
   );
 }

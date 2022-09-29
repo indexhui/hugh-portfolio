@@ -2,7 +2,7 @@ import { Flex, Text, VStack, Heading, chakra } from '@chakra-ui/react';
 import BannerSwiper from 'components/BannerSwiper';
 
 const IntroSection = props => {
-  const { title, bannerList, introduction } = props;
+  const { title, subTitle, bannerList, introduction } = props;
   return (
     <Flex
       wrap="wrap"
@@ -11,12 +11,17 @@ const IntroSection = props => {
       py={{ base: '20px', lg: '32px' }}
       w="100%"
     >
-      <Heading variant="banner" textAlign="center" pb="24px">
-        <chakra.span fontFamily="'Montserrat'">
-          {title.en || 'English title'}
-        </chakra.span>
-        {title.zh || '中文標題'}
-      </Heading>
+      <VStack pb="24px" spacing="12px">
+        <Heading variant="banner" textAlign="center">
+          <chakra.span fontFamily="'Montserrat'">
+            {title.en || 'English title'}
+          </chakra.span>
+          {title.zh || '中文標題'}
+        </Heading>
+        <Text color="gray.200" textAlign="center" fontWeight="300">
+          {subTitle || '產品類型介紹'}
+        </Text>
+      </VStack>
       <Flex wrap="wrap" w="100%" align="center">
         <BannerSwiper bannerList={bannerList} />
         <Flex
