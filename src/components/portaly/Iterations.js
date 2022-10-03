@@ -120,11 +120,11 @@ const Iterations = () => {
             <Text>Iterations Result</Text>
             <Text>首次接觸的使用者完成編輯時間從</Text>
             <HStack>
-              <Text fontSize="32px">7分 ~ 8分</Text>
+              <Text fontSize="32px">7~8 分鐘</Text>
               <Text fontSize="32px" color="whiteAlpha.800">
                 縮減至
               </Text>
-              <Text fontSize="32px">3分 ~ 5分</Text>
+              <Text fontSize="32px">3~5 分鐘</Text>
             </HStack>
             <Text>
               第一次完成編輯的時間減少，讓使用者有機會進一步熟悉進階的功能

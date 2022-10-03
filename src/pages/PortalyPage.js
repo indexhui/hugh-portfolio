@@ -5,6 +5,7 @@ import DefineRequirement from 'components/portaly/DefineRequirement';
 import Solution from 'components/portaly/Solution';
 import Iterations from 'components/portaly/Iterations';
 import Outcome from 'components/portaly/Outcome';
+import Takeaway from 'components/portaly/Takeaway';
 
 // import banner0 from 'assets/images/portaly/banner01.png';
 import banner01 from 'assets/images/portaly/banner01.jpg';
@@ -53,6 +54,7 @@ export function PortalyPage() {
       <Solution />
       <Iterations />
       <Outcome />
+      <Takeaway />
     </>
   );
 }

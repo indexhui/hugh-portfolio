@@ -19,6 +19,7 @@ import { Container } from 'components/layouts';
 import story01 from 'assets/images/portaly/story01.png';
 import lee from 'assets/images/portaly/lee.jpg';
 import ig01 from 'assets/images/portaly/ig01.jpg';
+import ig02 from 'assets/images/portaly/ig02.jpg';
 
 const ProblemDiscovery = () => {
   return (
@@ -30,15 +31,14 @@ const ProblemDiscovery = () => {
       </Flex>
       <Text fontSize="3xl" w="100%" pt="24px">
         <Highlight query="圖像" styles={{ px: '1', py: '1', bg: 'orange.100' }}>
-          社群創作者們善於用圖像向受眾進行溝通
+          社群創作者們善於用圖像的力量向受眾傳遞價值
         </Highlight>
-        {/* 社群創作者們善於用<Highlight>圖像</Highlight>向受眾進行溝通， */}
         <br />
         <Highlight
           query="文字連結"
           styles={{ px: '1', py: '1', bg: 'orange.100' }}
         >
-          現行的 Link-in-Bio 工具僅文字連結按鈕組合限縮了表達的力道
+          現行的 Link-in-Bio 工具僅文字連結限制了創作者的發揮
         </Highlight>
       </Text>
       {/* 從先前專案中發現需求 */}
@@ -114,7 +114,7 @@ const ProblemDiscovery = () => {
               borderColor="grey.400"
               w="100%"
               rounded="md"
-              src={ig01}
+              src={ig02}
             />
             <Text color="grey.800" fontSize="12px">
               個人主頁與限時態動成為連結
