@@ -38,6 +38,28 @@ import socialAvatar03 from 'assets/images/portaly/socialAvatar03.jpg';
 
 import userAvatar01 from 'assets/images/portaly/userAvatar01.jpg';
 import userAvatar02 from 'assets/images/portaly/userAvatar02.jpg';
+import userAvatar03 from 'assets/images/portaly/userAvatar03.jpg';
+import userAvatar04 from 'assets/images/portaly/userAvatar04.jpg';
+import userAvatar05 from 'assets/images/portaly/userAvatar05.jpg';
+import userAvatar06 from 'assets/images/portaly/userAvatar06.jpg';
+import userAvatar07 from 'assets/images/portaly/userAvatar07.jpg';
+import userAvatar08 from 'assets/images/portaly/userAvatar08.jpg';
+import userAvatar09 from 'assets/images/portaly/userAvatar09.jpg';
+import userAvatar10 from 'assets/images/portaly/userAvatar10.jpg';
+import userAvatar11 from 'assets/images/portaly/userAvatar11.jpg';
+import userAvatar12 from 'assets/images/portaly/userAvatar12.jpg';
+import userAvatar13 from 'assets/images/portaly/userAvatar13.jpg';
+import userAvatar14 from 'assets/images/portaly/userAvatar14.jpg';
+import userAvatar15 from 'assets/images/portaly/userAvatar15.jpg';
+import userAvatar16 from 'assets/images/portaly/userAvatar16.jpg';
+import userAvatar17 from 'assets/images/portaly/userAvatar17.jpg';
+import userAvatar18 from 'assets/images/portaly/userAvatar18.jpg';
+import userAvatar19 from 'assets/images/portaly/userAvatar19.jpg';
+import userAvatar20 from 'assets/images/portaly/userAvatar20.jpg';
+import userAvatar21 from 'assets/images/portaly/userAvatar21.jpg';
+import userAvatar22 from 'assets/images/portaly/userAvatar22.jpg';
+import userAvatar23 from 'assets/images/portaly/userAvatar23.jpg';
+import userAvatar24 from 'assets/images/portaly/userAvatar24.jpg';
 
 const outcomeImageList = [
   {
@@ -104,27 +126,37 @@ const userList = [
       {
         name: '怪奇事物所',
         avatar: userAvatar02,
-        portaly: 'https://portaly.cc/thenothingseal',
+        portaly: 'https://portaly.cc/Incrediville',
       },
       {
-        name: '無所事事小海豹',
-        avatar: userAvatar02,
-        portaly: 'https://portaly.cc/thenothingseal',
+        name: '豆苗先生',
+        avatar: userAvatar03,
+        portaly: 'https://portaly.cc/MrDoumiao',
       },
       {
-        name: '無所事事小海豹',
-        avatar: userAvatar02,
-        portaly: 'https://portaly.cc/thenothingseal',
+        name: 'ㄇㄚˊ幾兔',
+        avatar: userAvatar04,
+        portaly: 'https://portaly.cc/machiko',
       },
       {
-        name: '無所事事小海豹',
-        avatar: userAvatar02,
-        portaly: 'https://portaly.cc/thenothingseal',
+        name: '阿軒｜A-Xuan',
+        avatar: userAvatar05,
+        portaly: 'https://portaly.cc/axuantoo',
       },
       {
-        name: '無所事事小海豹',
-        avatar: userAvatar02,
-        portaly: 'https://portaly.cc/thenothingseal',
+        name: '廢物女友',
+        avatar: userAvatar06,
+        portaly: 'https://portaly.cc/Lousygirlfriend',
+      },
+      {
+        name: 'Nuomi 諾米',
+        avatar: userAvatar07,
+        portaly: 'https://portaly.cc/Nuomi',
+      },
+      {
+        name: '小學課本的逆襲',
+        avatar: userAvatar08,
+        portaly: 'https://portaly.cc/turtledrawturtle',
       },
     ],
   },
@@ -132,9 +164,44 @@ const userList = [
     type: '個人品牌',
     list: [
       {
+        name: '施博瀚 Bohan Shih',
+        avatar: userAvatar09,
+        portaly: 'https://portaly.cc/bohanshih',
+      },
+      {
+        name: '傑哥',
+        avatar: userAvatar10,
+        portaly: 'https://portaly.cc/jesseuni',
+      },
+      {
+        name: '蒼藍鴿',
+        avatar: userAvatar11,
+        portaly: 'https://portaly.cc/bluepigeon',
+      },
+      {
         name: '三個字SunGuts',
-        avatar: '',
+        avatar: userAvatar12,
         portaly: 'https://portaly.cc/sunguts',
+      },
+      {
+        name: '陳繁齊',
+        avatar: userAvatar13,
+        portaly: 'https://portaly.cc/dyingintherain',
+      },
+      {
+        name: '街頭故事 李白',
+        avatar: userAvatar14,
+        portaly: 'https://portaly.cc/baileestory',
+      },
+      {
+        name: 'Peeta',
+        avatar: userAvatar15,
+        portaly: 'https://portaly.cc/peeta',
+      },
+      {
+        name: '女子健心室',
+        avatar: userAvatar16,
+        portaly: 'https://portaly.cc/girlpoweroom',
       },
     ],
   },
@@ -143,8 +210,43 @@ const userList = [
     list: [
       {
         name: 'Pinkoi',
-        avatar: '',
+        avatar: userAvatar17,
         portaly: 'https://portaly.cc/Pinkoi',
+      },
+      {
+        name: '台北金馬影展',
+        avatar: userAvatar18,
+        portaly: 'https://portaly.cc/TGHFF',
+      },
+      {
+        name: 'justfont',
+        avatar: userAvatar19,
+        portaly: 'https://portaly.cc/justfont',
+      },
+      {
+        name: '走走家具',
+        avatar: userAvatar20,
+        portaly: 'https://portaly.cc/GOGOHOME',
+      },
+      {
+        name: 'FunNow',
+        avatar: userAvatar21,
+        portaly: 'https://portaly.cc/funnow.tw',
+      },
+      {
+        name: 'BIOS ',
+        avatar: userAvatar22,
+        portaly: 'https://portaly.cc/bios_monthly',
+      },
+      {
+        name: '換日線',
+        avatar: userAvatar23,
+        portaly: 'https://portaly.cc/crossing',
+      },
+      {
+        name: 'INSIDE網路趨勢',
+        avatar: userAvatar24,
+        portaly: 'https://portaly.cc/inside.tw',
       },
     ],
   },
@@ -276,7 +378,7 @@ const UserTypeSection = props => {
   return (
     <Flex bgColor="grey.300" rounded="md" p="20px" direction="column">
       <Text pb="8px">{type}</Text>
-      <SimpleGrid columns="4" spacingX="8px" spacingY="8px">
+      <SimpleGrid columns="4" spacingX="12px" spacingY="12px">
         {list.map((item, index) => (
           <Tooltip
             key={index + 'user'}
