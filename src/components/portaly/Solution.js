@@ -50,33 +50,36 @@ const Feature = () => {
         gap={6}
       >
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designFeature01}
             />
+            <Text textStyle="note">podcast、youtube 嵌入</Text>
           </VStack>
         </GridItem>
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designFeature03}
             />
+            <Text textStyle="note">合作洽詢</Text>
           </VStack>
         </GridItem>
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designFeature02}
             />
+            <Text textStyle="note">贊助功能</Text>
           </VStack>
         </GridItem>
       </Grid>
@@ -104,33 +107,36 @@ const Block = () => {
         gap={6}
       >
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designBlock01}
             />
+            <Text textStyle="note">大型方塊</Text>
           </VStack>
         </GridItem>
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designBlock02}
             />
+            <Text textStyle="note">橫型方塊、純文字、兩格方格</Text>
           </VStack>
         </GridItem>
         <GridItem w="100%">
-          <VStack spacing="20px">
+          <VStack spacing="5px">
             <Image
               rounded="md"
               border="1px solid"
               borderColor="grey.500"
               src={designBlock03}
             />
+            <Text textStyle="note">長型、橫型方塊可設定輪播</Text>
           </VStack>
         </GridItem>
       </Grid>
@@ -161,33 +167,36 @@ const Solution = () => {
           gap={6}
         >
           <GridItem w="100%">
-            <VStack spacing="20px">
+            <VStack spacing="5px">
               <Image
                 rounded="md"
                 border="1px solid"
                 borderColor="grey.500"
                 src={designIntro01}
               />
+              <Text textStyle="note">個人介紹區域</Text>
             </VStack>
           </GridItem>
           <GridItem w="100%">
-            <VStack spacing="20px">
+            <VStack spacing="5px">
               <Image
                 rounded="md"
                 border="1px solid"
                 borderColor="grey.500"
                 src={designIntro02}
               />
+              <Text textStyle="note">二維碼分享</Text>
             </VStack>
           </GridItem>
           <GridItem w="100%">
-            <VStack spacing="20px">
+            <VStack spacing="5px">
               <Image
                 rounded="md"
                 border="1px solid"
                 borderColor="grey.500"
                 src={designIntro03}
               />
+              <Text textStyle="note">提供社群連結搭配</Text>
             </VStack>
           </GridItem>
         </Grid>

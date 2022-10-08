@@ -3,6 +3,7 @@ import colors from 'theme/colors';
 import Text from 'theme/text';
 import Heading from 'theme/heading';
 import Link from 'theme/link';
+import textStyles from 'theme/textStyles';
 // import Button from './components/button';
 
 const customTheme = {
@@ -21,6 +22,7 @@ const customTheme = {
     },
   },
   colors,
+  textStyles,
 
   components: {
     Text,

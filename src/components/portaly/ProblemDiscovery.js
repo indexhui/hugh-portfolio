@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 
 import { AiOutlineLink } from 'react-icons/ai';
+import { HiOutlineLightBulb } from 'react-icons/hi';
 
 import { Container } from 'components/layouts';
 
@@ -20,6 +21,7 @@ import story01 from 'assets/images/portaly/story01.png';
 import lee from 'assets/images/portaly/lee.jpg';
 import ig01 from 'assets/images/portaly/ig01.jpg';
 import ig02 from 'assets/images/portaly/ig02.jpg';
+import hughAvatar from 'assets/images/portaly/hughAvatar.jpg';
 
 const ProblemDiscovery = () => {
   return (
@@ -66,13 +68,14 @@ const ProblemDiscovery = () => {
           <Flex w={{ base: '100%', lg: '50%' }} align="center">
             <VStack align="flex-start" px="12px">
               <Text variant="body">
-                先前與真實引擎公司合作，打造 IP 創作者的募資平台，
-              </Text>
-              <Text variant="body">
-                讓我們有深入了解圖文作家的機會，在與圖文作家的訪談過程中發現:
-              </Text>
-              <Text variant="body">
-                相較募資平台粉絲能不能順利完成付款，他們更煩惱在 IG 的導流狀況
+                <Highlight
+                  query={['完成付款', ' IG 的導流狀況']}
+                  styles={{ px: '1', py: '1', bg: 'orange.100' }}
+                >
+                  先前與真實引擎公司合作，打造 IP 創作者的募資平台，
+                  讓我們有深入了解圖文作家的機會，在與圖文作家的訪談過程中發現:相較募資平台粉絲能不能順利完成付款，他們更煩惱在
+                  IG 的導流狀況。
+                </Highlight>
               </Text>
             </VStack>
           </Flex>
@@ -142,7 +145,7 @@ const ProblemDiscovery = () => {
             </VStack>
             <VStack w="70%" spacing="20px">
               <Flex
-                w="80%"
+                w="85%"
                 bg="blue.700"
                 borderRadius="0 15px 15px 15px"
                 p="20px"
@@ -151,9 +154,24 @@ const ProblemDiscovery = () => {
                   收入來源有很多種，所以會有很多不一樣的網站、業主，也都會有不一樣的需求。我需要有個地方像抽屜一樣，把我的作品、我提供的服務都整理收集在一起，讓不同需求的人有一個平台來觀看、取得他們需要的資訊
                 </Text>
               </Flex>
-              <Text>有許多不種類型的連結，需要有效的分區塊安排各個類型</Text>
+              <HStack w="85%">
+                <HStack
+                  w="100%"
+                  bg="white"
+                  color="blue.700"
+                  borderRadius="15px 0 15px 15px"
+                  p="20px"
+                  align="flex-start"
+                >
+                  <Icon mt="px" as={HiOutlineLightBulb} />
+                  <Text color="blue.700">
+                    有許多不種類型的連結，需要有效的分區塊安排各個類型
+                  </Text>
+                </HStack>
+                <Image w="48px" src={hughAvatar} rounded="full" />
+              </HStack>
               <Flex
-                w="80%"
+                w="85%"
                 bg="blue.700"
                 borderRadius="0 15px 15px 15px"
                 p="20px"
@@ -163,7 +181,22 @@ const ProblemDiscovery = () => {
                   大部分多以文字為主，加上會有很多東西不能己隨心所欲去調整。
                 </Text>
               </Flex>
-              <Text>對創作者來說他們需要圖文搭配和調整的空間</Text>
+              <HStack w="85%">
+                <HStack
+                  w="100%"
+                  bg="white"
+                  color="grey.700"
+                  borderRadius="15px 0 15px 15px"
+                  p="20px"
+                  align="flex-start"
+                >
+                  <Icon mt="px" as={HiOutlineLightBulb} />
+                  <Text color="grey.700">
+                    對創作者來說他們需要圖文搭配和調整的空間
+                  </Text>
+                </HStack>
+                <Image w="48px" src={hughAvatar} rounded="full" />
+              </HStack>
             </VStack>
           </Flex>
         </Flex>

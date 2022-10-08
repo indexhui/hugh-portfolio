@@ -1,7 +1,7 @@
 import { Flex, Text, VStack, Box } from '@chakra-ui/react';
 
 const OverviewSection = props => {
-  const { content } = props;
+  const { content, projectOutcomes } = props;
   return (
     <Flex
       bg="grey.300"
@@ -29,24 +29,21 @@ const OverviewSection = props => {
             </Text>
           ))}
         </VStack>
-        <Flex align="flex-start" w="100%" py="24px" direction="column">
-          <Text variant="title" color="blue.700">
-            Project OutComes
-          </Text>
-          <VStack pt="24px" align="flex-start">
-            <Text variant="body">
-              + 完成 MVP
-              設計，並藉由易用性測試，大幅改善體驗問題，增加使用者滿意度
+        {projectOutcomes && (
+          <Flex align="flex-start" w="100%" py="24px" direction="column">
+            <Text variant="title" color="blue.700">
+              Project OutComes
             </Text>
-            <Text variant="body">
-              + 正式上線第二個月，進到全球流量排名前 50,000，國內排名前 2,000
-            </Text>
-            <Text variant="body">
-              + Beta 期間，超過 3000 個傳送門被開啟，三個月的網站總瀏覽量加總：
-              500k
-            </Text>
-          </VStack>
-        </Flex>
+            <VStack pt="24px" align="flex-start">
+              {projectOutcomes &&
+                projectOutcomes.map((item, index) => (
+                  <Text variant="body" key={index + 'projectOutcomes'}>
+                    {item}
+                  </Text>
+                ))}
+            </VStack>
+          </Flex>
+        )}
       </Flex>
     </Flex>
   );

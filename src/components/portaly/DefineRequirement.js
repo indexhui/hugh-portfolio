@@ -12,6 +12,7 @@ import {
   Icon,
   Grid,
   GridItem,
+  useToken,
 } from '@chakra-ui/react';
 
 import { AiOutlineLink } from 'react-icons/ai';
@@ -24,6 +25,8 @@ import re02 from 'assets/images/portaly/re02.jpg';
 import re03 from 'assets/images/portaly/re03.jpg';
 
 const DefineRequirement = () => {
+  const [grey600] = useToken('colors', ['grey.600']);
+
   return (
     <Container bgColor="grey.300" py="40px">
       <Flex w="100%">
@@ -37,9 +40,12 @@ const DefineRequirement = () => {
           <Text>歸納對目前產品未被滿足的痛點</Text>
           <Text>調查對於不同延伸功能的期待程度</Text>
         </VStack>
-        <Flex w="100%">
-          <Image src={data01} />
-        </Flex>
+        <VStack w="100%">
+          <Image src={data01} border={`1px solid ${grey600}`} rounded="md" />
+          <Text color="grey.600" fontSize="12px">
+            需求統計，經過模糊處理
+          </Text>
+        </VStack>
       </Stack>
       <Grid
         py="30px"
