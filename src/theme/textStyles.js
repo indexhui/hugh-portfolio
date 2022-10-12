@@ -10,6 +10,11 @@ const textStyles = {
     fontWeight: '500',
     fontSize: { base: '17px', lg: '20px' },
   },
+  title1: {
+    color: 'grey.800',
+    fontWeight: '500',
+    fontSize: { base: '17px', lg: '20px' },
+  },
   text01: {
     color: 'grey.700',
     fontWeight: '300',

@@ -4,6 +4,9 @@ import IntroSection from 'components/layouts/IntroSection';
 import OverviewSection from 'components/layouts/OverviewSection';
 
 import Background from 'components/crosspoint/Background';
+import RedesignIntro from 'components/crosspoint/RedesignIntro';
+import Problem from 'components/crosspoint/Problem';
+import Solution from 'components/crosspoint/Solution';
 
 import banner01 from 'assets/images/crosspoint/banner01.png';
 
@@ -29,11 +32,6 @@ const introduction = [
     title: '工作範疇',
     content: '識別設計、功能規劃、使用者研究、設計完稿、工程交付',
   },
-];
-
-const overview = [
-  'Crosspoint 透過攝影機捕捉人體動態變化搭配 AI 影像分析， 提供健身與復健場域，利用 AI 姿勢評估檢測系統，去了解運動時身體平衡差異與肌肉緊繃概況，讓教練以資訊視覺化圖像來提供會員建議。',
-  '團隊首位設計師，除了設計庶務需求外，更需要了解團隊特性來培養團隊與設計師的信任合作關係，也同時需要加強運動產業的了解與觀察從中發揮設計價值。',
 ];
 
 const overviewContent = {
@@ -63,6 +61,9 @@ export function CrosspointPage() {
         projectOutcomes={overviewContent.projectOutcomes}
       />
       <Background />
+      <RedesignIntro />
+      <Problem />
+      <Solution />
     </>
   );
 }

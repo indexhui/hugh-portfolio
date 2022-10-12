@@ -284,15 +284,17 @@ const RevealImage = props => {
 };
 
 const DemoSection = () => {
-  const variants = {
-    visible: {
+  const defaultVariants = {
+    visible: custom => ({
       opacity: 1,
-      y: 50,
-    },
-    hidden: {
-      opacity: 0.2,
-      y: 100,
-    },
+      y: '0',
+      transition: {
+        delay: (custom?.order || 0) * 0.2,
+        duration: 0.5,
+        type: 'tween',
+      },
+    }),
+    hidden: custom => ({ opacity: 0, y: '25%' }),
   };
   const transition = { duration: 0.5, type: 'tween' };
   return (
