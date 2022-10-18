@@ -7,6 +7,9 @@ import Background from 'components/crosspoint/Background';
 import RedesignIntro from 'components/crosspoint/RedesignIntro';
 import Problem from 'components/crosspoint/Problem';
 import Solution from 'components/crosspoint/Solution';
+import Outcome from 'components/crosspoint/Outcome';
+import Iterations from 'components/crosspoint/Iterations';
+import Takeaway from 'components/crosspoint/Takeaway';
 
 import banner01 from 'assets/images/crosspoint/banner01.png';
 
@@ -64,6 +67,9 @@ export function CrosspointPage() {
       <RedesignIntro />
       <Problem />
       <Solution />
+      <Outcome />
+      <Iterations />
+      <Takeaway />
     </>
   );
 }
