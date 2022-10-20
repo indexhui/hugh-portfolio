@@ -19,6 +19,7 @@ import {
 
 import Router from 'routes';
 import Header from 'components/header/Header';
+import Footer from 'components/Footer';
 import theme from 'theme/theme';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Header />
       <Router />
+      <Footer />
     </ChakraProvider>
   );
 }

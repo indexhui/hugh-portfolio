@@ -29,13 +29,6 @@ const projectList = [
     link: '/portaly',
     isNeedPassword: true,
   },
-  {
-    title: 'SOV 舒服美',
-    tag: 'App Design, UI/UX Design, Prototyping, User Research',
-    link: '/realengine',
-    img: project03,
-    isNeedPassword: true,
-  },
 ];
 
 const DesignProjectList = () => {
