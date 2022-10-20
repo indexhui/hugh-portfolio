@@ -1,4 +1,5 @@
 import { Flex, VStack, Heading } from '@chakra-ui/react';
+
 import { Container, SkeletonImage } from 'components/layouts';
 
 import ProjectCard from 'components/ProjectCard';
@@ -41,7 +42,12 @@ const projectList = [
 
 const DesignProjectList = () => {
   return (
-    <Flex w="100%" justify="center" py={{ base: '48px', lg: '32px' }}>
+    <Flex
+      id="works"
+      w="100%"
+      justify="center"
+      py={{ base: '48px', lg: '32px' }}
+    >
       <Container>
         <Heading as="h2" py="40px">
           設計案例

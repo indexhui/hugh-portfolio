@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import { Container } from 'components/layouts';
+import { Container, SkeletonImage } from 'components/layouts';
 
 import avatar from 'assets/images/about/hugh_avatar.jpg';
 import hello from 'assets/images/about/hello.jpg';
@@ -161,7 +161,7 @@ const SelfIntroduction = () => {
             </VStack>
           </Flex>
           <Flex w={{ base: '100%', md: '35%' }} justify="center">
-            <Image
+            <SkeletonImage
               w="100%"
               pt={{ base: '20px', lg: '0' }}
               borderRadius="20px 0 20px 20px"

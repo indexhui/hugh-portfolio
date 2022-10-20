@@ -1,17 +1,114 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Flex, HStack, Text, Image } from '@chakra-ui/react';
+import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
+import { useLocation, useNavigate } from 'react-router-dom';
+import {
+  Flex,
+  HStack,
+  VStack,
+  Text,
+  Image,
+  Link,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useDisclosure,
+  useMediaQuery,
+} from '@chakra-ui/react';
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import MobileMenu from './MobileMenu';
 
 import logo from 'assets/images/logo.svg';
 
 const MotionFlex = motion(Flex);
 
+const HoverDropMenu = ({ handleClick, isActive }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <Menu
+      isOpen={isOpen}
+      w="unset"
+      px="20px"
+      border="1px solid red"
+      position="relative"
+      direction="column"
+      role="group"
+    >
+      <MenuButton
+        color={isActive ? 'blue.700' : 'grey.700'}
+        onMouseEnter={onOpen}
+        onClick={() => handleClick()}
+        onMouseLeave={onClose}
+      >
+        Works <ChevronDownIcon />
+      </MenuButton>
+      <MenuList
+        onMouseEnter={onOpen}
+        onMouseLeave={onClose}
+        w="100%"
+        position="absolute"
+        top="0px"
+        bgColor="whiteAlpha.700"
+        textStyle="text0"
+        transition="all .25s"
+        backdropFilter="blur(5px)"
+        py="0"
+      >
+        <MenuItem
+          as={RouterLink}
+          to="/crosspoint"
+          _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
+          onClick={onClose}
+        >
+          Crosspoint AI
+        </MenuItem>
+        <MenuItem
+          as={RouterLink}
+          to="/realengine"
+          _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
+          onClick={onClose}
+        >
+          Real Engine
+        </MenuItem>
+        <MenuItem
+          as={RouterLink}
+          to="/portaly"
+          _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
+          onClick={onClose}
+        >
+          Portaly傳送門
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  );
+};
+
 const Header = props => {
   const [isShow, setIsShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isLargerThan980] = useMediaQuery('(min-width: 980px)');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = () => {
+    const element = document.getElementById('works');
+    polyfill();
+    scrollIntoView(element, {
+      behavior: 'smooth',
+      inline: 'center',
+    });
+  };
+
+  const handleClick = () => {
+    if (location.pathname === '/') {
+      handleScroll();
+    } else {
+      navigate('/#works', { replace: true });
+    }
+  };
 
   const variants = {
     open: { opacity: 1, y: 0 },
@@ -70,28 +167,28 @@ const Header = props => {
           <HStack>
             <Image w="30px" src={logo} />
             <Text fontWeight="500" color="grey.650">
-              Hugh Feng{' '}
+              Hugh Feng
             </Text>
           </HStack>
         </RouterLink>
-        <HStack spacing="20px">
-          <RouterLink to="/">
-            <Text
-              fontWeight="500"
-              color={location.pathname === '/' ? 'blue.700' : 'grey.700'}
-            >
-              Works
-            </Text>
-          </RouterLink>
-          <RouterLink to="/about">
-            <Text
-              color={location.pathname === '/about' ? 'blue.700' : 'grey.700'}
-            >
-              About
-            </Text>
-          </RouterLink>
-          <Text>Resume</Text>
-        </HStack>
+        {isLargerThan980 ? (
+          <HStack spacing="20px">
+            <HoverDropMenu
+              isActive={location.pathname === '/'}
+              handleClick={handleClick}
+            />
+            <RouterLink to="/about">
+              <Text
+                color={location.pathname === '/about' ? 'blue.700' : 'grey.700'}
+              >
+                About
+              </Text>
+            </RouterLink>
+            <Text>Resume</Text>
+          </HStack>
+        ) : (
+          <MobileMenu />
+        )}
       </Flex>
     </MotionFlex>
   );
