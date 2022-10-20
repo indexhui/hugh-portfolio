@@ -27,6 +27,18 @@ const textStyles = {
     lineHeight: '1.8',
     fontSize: { base: '16px', lg: '18px' },
   },
+  text03: {
+    color: 'grey.700',
+    fontWeight: '300',
+    lineHeight: '1.8',
+    fontSize: { base: '14px', lg: '18px' },
+  },
+  text04: {
+    color: 'grey.700',
+    fontWeight: '300',
+    lineHeight: '1.8',
+    fontSize: { base: '12px', lg: '14px' },
+  },
   note: {
     color: 'grey.600',
     fontWeight: '300',

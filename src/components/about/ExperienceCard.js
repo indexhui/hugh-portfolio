@@ -31,29 +31,34 @@ const ExperienceCard = props => {
   return (
     <Flex
       w="100%"
-      p="20px"
-      boxShadow="0px 4px 10px rgba(214, 214, 214, 0.25)"
+      p="24px"
+      // boxShadow="0px 4px 10px rgba(214, 214, 214, 0.25)"
       border="1px solid"
-      borderColor="grey.400"
+      borderColor="grey.500"
       direction="column"
-      rounded="sm"
+      rounded="md"
     >
-      <Flex w="100%" justify="space-between">
+      <Flex
+        w="100%"
+        justify="space-between"
+        direction={{ base: 'column', lg: 'row' }}
+        align={{ base: 'flex-start', lg: 'center' }}
+      >
         <HStack spacing="10px">
           <SkeletonImage
-            rounded="sm"
+            rounded="md"
             w={{ base: '40px', lg: '55px' }}
             src={image}
           />
-          <VStack align="flex-start">
-            <Text fontWeight="500" color="grey.700">
+          <VStack align="flex-start" spacing="5px">
+            <Text fontWeight="600" color="grey.650">
               {company}
             </Text>
             <Text color="grey.800">{title}</Text>
           </VStack>
         </HStack>
-        <VStack align="flex-end">
-          <Text fontSize="12px">{time}</Text>
+        <VStack align={{ base: 'flex-start', lg: 'flex-end' }}>
+          <Text fontSize="14px">{time}</Text>
           <HStack spacing="4px">
             {tag.map(item => (
               <Tag key={item} content={item} />

@@ -12,7 +12,7 @@ import {
 
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Container } from 'components/layouts';
+import { Container, Span } from 'components/layouts';
 import ExperienceCard from './ExperienceCard';
 
 import institute from 'assets/images/about/institute.jpg';
@@ -23,18 +23,20 @@ import sov from 'assets/images/about/sov.jpg';
 const InstituteContent = () => {
   return (
     <VStack align="flex-start" w="100%" pt="12px">
-      <Box>
-        <chakra.span>任職期間，製作</chakra.span>
+      <Box textStyle="text02">
+        <Span>任職期間，製作</Span>
         <Link
           fontWeight="400"
           variant="link02"
+          textStyle="text02"
           href="https://zinstitute.net/zh"
           isExternal
         >
           <chakra.span
             as="span"
+            mx="4px"
             borderBottom="2px solid"
-            borderColor="blue.600"
+            borderColor="blue.500"
           >
             互動式特效官網
           </chakra.span>
@@ -51,7 +53,13 @@ const InstituteContent = () => {
 
 const RealContent = () => {
   return (
-    <VStack align="flex-start" w="100%" pt="12px" color="grey.800">
+    <VStack
+      align="flex-start"
+      w="100%"
+      pt="12px"
+      color="grey.800"
+      textStyle="text02"
+    >
       <Text color="grey.800" fontWeight="300">
         以顧問合作關係擔任產品設計師，前後協助規劃與設計了兩款產品的MVP。
         綜合使用者體驗和市場規劃產品策略，定義核心設計元件庫系統與操作模式。
@@ -62,12 +70,12 @@ const RealContent = () => {
         as={RouterLink}
         to="/realengine"
         borderBottom="2px solid"
-        borderColor="blue.600"
+        borderColor="blue.500"
       >
         Real Engine 真實引擎 : IP創作者桌遊平台
       </Link>
       <Link fontWeight="400" variant="link02" as={RouterLink} to="/portaly">
-        <chakra.span as="span" borderBottom="2px solid" borderColor="blue.600">
+        <chakra.span as="span" borderBottom="2px solid" borderColor="blue.500">
           Portaly 傳送門 : Link-in-Bio 輕型個人網站工具
         </chakra.span>
       </Link>
@@ -77,38 +85,43 @@ const RealContent = () => {
 
 const CrosspointContent = () => {
   return (
-    <VStack align="flex-start" w="100%" pt="12px" color="grey.800">
+    <VStack
+      align="flex-start"
+      w="100%"
+      pt="12px"
+      color="grey.800"
+      textStyle="text02"
+    >
       <Text color="grey.800" fontWeight="300">
         團隊首位設計師，建立從需求探索到工程與設計的協作流程。定義了品牌識別以及設計系統分別用於檢測系統與
         SaaS 工具服務。負責增加場館對於檢測體驗的價值需求。
       </Text>
-      <HStack color="grey.800" fontWeight="300" spacing="0">
-        <Text color="grey.800" fontWeight="300">
+      <Box color="grey.800" fontWeight="300" spacing="0">
+        <Span color="grey.800" fontWeight="300">
           我設計的範圍有
-        </Text>
-        <Link
-          fontWeight="400"
-          variant="link02"
-          as={RouterLink}
-          to="/crosspoint"
-          borderBottom="2px solid"
-          borderColor="blue.600"
-        >
-          <HStack spacing="0">
-            <chakra.span as="span">檢測服務</chakra.span>
-          </HStack>
+        </Span>
+        <Link fontWeight="400" variant="link02" as={Span} to="/crosspoint">
+          <Span mx="4px" borderBottom="2px solid" borderColor="blue.500">
+            檢測服務
+          </Span>
         </Link>
-        <Text color="grey.800" fontWeight="300">
+        <Span color="grey.800" fontWeight="300">
           、問卷系統、CRM、Ｃ端用戶報告與小程序。
-        </Text>
-      </HStack>
+        </Span>
+      </Box>
     </VStack>
   );
 };
 
 const SovContent = () => {
   return (
-    <VStack align="flex-start" w="100%" pt="12px" color="grey.800">
+    <VStack
+      align="flex-start"
+      w="100%"
+      pt="12px"
+      color="grey.800"
+      textStyle="text02"
+    >
       <Box
         w="100%"
         color="grey.800"

@@ -56,7 +56,7 @@ const Header = props => {
       top="0"
       left="0"
       h="68px"
-      zIndex="10"
+      zIndex="20"
       justify="center"
       boxShadow={isShow ? '0px 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
     >

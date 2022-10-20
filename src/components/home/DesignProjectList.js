@@ -8,19 +8,19 @@ import project03 from 'assets/images/project03.jpg';
 
 const projectList = [
   {
+    title: 'Crosspoint  AI 體態分析 ',
+    tag: 'App Design, UI/UX Design, Prototyping, User Research',
+    img: project02,
+    link: '/crosspoint',
+    isNeedPassword: false,
+  },
+  {
     title: 'Real Engine 真實引擎',
     tag: 'App Design, UI/UX Design, Prototyping, User Research',
     img: project01,
     link: '/realengine',
     content:
       '設計產品的 MVP 版本且順利上線。我也定義了產品團隊第一套設計系統與設計元件庫。',
-  },
-  {
-    title: 'Crosspoint  AI 體態分析 ',
-    tag: 'App Design, UI/UX Design, Prototyping, User Research',
-    img: project02,
-    link: '/crosspoint',
-    isNeedPassword: false,
   },
   {
     title: 'Portaly 傳送門',

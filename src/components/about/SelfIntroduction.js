@@ -1,6 +1,12 @@
-import { Flex, Image, Box, Text, VStack } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Box,
+  Text,
+  VStack,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import SectionContainer from 'components/SectionContainer';
 
 import { Container } from 'components/layouts';
 
@@ -97,26 +103,20 @@ const RightHero = () => {
 };
 
 const SelfIntroduction = () => {
+  const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
   return (
-    <Flex
-      w="100%"
-      position="relative"
-      bgColor="grey.400"
-      overflow="hidden"
-      h="650px"
-    >
-      <Decoration />
-      {/* <RightHero /> */}
-      <SectionContainer>
-        <Flex w="100%">
+    <Flex w="100%" position="relative" bgColor="grey.400" overflow="hidden">
+      {isLargerThan1280 && <Decoration />}
+      <Container my={{ base: '40px', lg: '80px' }}>
+        <Flex w="100%" justify="space-between" wrap="wrap">
           <Flex
             zIndex="10"
-            w="50%"
-            align="flex-start"
+            w={{ base: '100%', md: '65%' }}
+            align={{ base: 'center', md: 'flex-start' }}
             direction="column"
-            pr="100px"
+            pr={{ base: '0', md: '20px' }}
           >
-            <Flex position="relative" ml="4px">
+            <Flex position="relative" ml={{ base: '0', md: '20px' }}>
               <Box
                 w="8px"
                 h="20px"
@@ -139,31 +139,41 @@ const SelfIntroduction = () => {
                 透過觀察提供人們所需幫助 <br /> 是我做為設計師的熱情所在
               </Text>
             </Flex>
-            <VStack pt="24px" spacing="12px" align="flex-start">
+            <VStack
+              pt="24px"
+              spacing={{ base: '6px', lg: '12px' }}
+              align="flex-start"
+              textStyle="text03"
+              color="grey.800"
+            >
               <Text>大家好，我是 Hugh，一位擅長前端、UI/UX 的產品設計師。</Text>
               <Text>
-                我目前是 Freelancer 前端工程師 / 產品設計師。我過去經歷包括在
+                我目前是 Freelane 前端工程師 / 產品設計師。我過去經歷包括在
                 zinstitute 擔任前端工程師，在 Crosspoint AI
                 擔任產品設計師，在日本寶可夢擔任卡牌平面設計師。我擁有工藝設計學士學位。
               </Text>
               <Text>
-                我相信設計發揮的力量，有助於人與產品之間創造流暢的互動和愉快的體驗。也相信以商業策略思考有助設計落地，並將概念想法成為現實。我享受作為產品設計師讓我有機會為人類進程做出貢獻的過程和成就感。它是我作為設計師的原動力。
+                我相信設計發揮的力量有助於人與產品之間創造流暢的互動和愉快的體驗。也相信以商業策略進行思考有助設計落地並將概念化為現實。我享受作為設計師讓我有機會為人類進程做出貢獻的過程和成就感。它是我作為設計師的原動力。
               </Text>
               <Text>
-                除了設計也喜歡接觸各個領域的專業，深入學習前端並結合兩個專業的運用在工作與生活上。
+                除了設計也喜歡接觸各領域的專業，包含學習前端並運用在工作與生活上。
               </Text>
             </VStack>
           </Flex>
-          <Image
-            borderRadius="50px 0 50px 50px"
-            w="50%"
-            h="400px"
-            src={hello}
-            alt="hello world"
-            objectFit="cover"
-          />
+          <Flex w={{ base: '100%', md: '35%' }} justify="center">
+            <Image
+              w="100%"
+              pt={{ base: '20px', lg: '0' }}
+              borderRadius="20px 0 20px 20px"
+              maxW="300px"
+              h="300px"
+              src={avatar}
+              alt="hello world"
+              objectFit="cover"
+            />
+          </Flex>
         </Flex>
-      </SectionContainer>
+      </Container>
     </Flex>
   );
 };
