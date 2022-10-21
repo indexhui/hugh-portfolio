@@ -101,16 +101,19 @@ const MobileMenu = () => {
               </RouterLink>
               <Box w="100%" h="1px" bg="whiteAlpha.500"></Box>
               <RouterLink to="/about" onClick={onClose}>
-                <Text>About</Text>
+                <Text fontSize="18px" fontWeight="500">
+                  About
+                </Text>
               </RouterLink>
-              <Text fontSize="18px" fontWeight="500">
-                Resume
-              </Text>
-              {/* {navList.map(item => (
-                <Box key={item.link} onClick={onClose}>
-                  <MobileMenuLink {...item} />
-                </Box>
-              ))} */}
+              <Link
+                onClick={onClose}
+                href="https://www.dropbox.com/s/d1hqrbosrglbc9i/Hugh_Resume.pdf?dl=0"
+                isExternal
+              >
+                <Text fontSize="18px" fontWeight="500">
+                  Resume
+                </Text>
+              </Link>
             </VStack>
           </MotionFlex>
         )}

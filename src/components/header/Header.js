@@ -179,12 +179,19 @@ const Header = props => {
             />
             <RouterLink to="/about">
               <Text
+                _hover={{ color: 'blue.600' }}
                 color={location.pathname === '/about' ? 'blue.700' : 'grey.700'}
               >
                 About
               </Text>
             </RouterLink>
-            <Text>Resume</Text>
+            <Link
+              variant="link02"
+              href="https://www.dropbox.com/s/d1hqrbosrglbc9i/Hugh_Resume.pdf?dl=0"
+              isExternal
+            >
+              <Text _hover={{ color: 'blue.600' }}>Resume</Text>
+            </Link>
           </HStack>
         ) : (
           <MobileMenu />
