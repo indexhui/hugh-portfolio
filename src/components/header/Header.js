@@ -43,7 +43,9 @@ const HoverDropMenu = ({ handleClick, isActive }) => {
         onClick={() => handleClick()}
         onMouseLeave={onClose}
       >
-        Works <ChevronDownIcon />
+        <RouterLink to="/works">
+          Works <ChevronDownIcon />
+        </RouterLink>
       </MenuButton>
       <MenuList
         onMouseEnter={onOpen}
@@ -103,11 +105,7 @@ const Header = props => {
   };
 
   const handleClick = () => {
-    if (location.pathname === '/') {
-      handleScroll();
-    } else {
-      navigate('/#works', { replace: true });
-    }
+    navigate('/works', { replace: true });
   };
 
   const variants = {
@@ -174,7 +172,7 @@ const Header = props => {
         {isLargerThan980 ? (
           <HStack spacing="20px">
             <HoverDropMenu
-              isActive={location.pathname === '/'}
+              isActive={location.pathname === '/works'}
               handleClick={handleClick}
             />
             <RouterLink to="/about">

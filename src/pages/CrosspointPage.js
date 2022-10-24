@@ -14,7 +14,7 @@ import Takeaway from 'components/crosspoint/Takeaway';
 import banner01 from 'assets/images/crosspoint/banner01.png';
 
 const title = { en: 'Crosspoint AI', zh: '運動風險檢測' };
-const subTitle = '運健檢測系統';
+const subTitle = '運動檢測系統';
 
 const bannerList = [banner01, banner01];
 

@@ -1,4 +1,4 @@
-import { Flex, Text, VStack, Heading } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import Intro from 'components/realengine/Intro';
 import Overview from 'components/realengine/Overview';

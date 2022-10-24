@@ -9,6 +9,7 @@ import {
   CrosspointPage,
   PortalyPage,
   AboutPage,
+  WorksPage,
 } from 'pages';
 
 const Wrapper = ({ children }) => {
@@ -28,12 +29,13 @@ const Router = () => {
           {/* <Route path="/resource" element={<ResourcePage />}>
             <Route path=":content" element={<ResourcePage />} />
           </Route> */}
-          <Route path="/works" element={<WorkPage />} />
+          {/* <Route path="/works" element={<WorkPage />} /> */}
           <Route path="/realengine" element={<RealenginePage />} />
           <Route path="/crosspoint" element={<CrosspointPage />} />
           <Route path="/portaly" element={<PortalyPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/works" element={<WorksPage />} />
         </Routes>
       </Wrapper>
     </AnimatePresence>

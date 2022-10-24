@@ -4,7 +4,11 @@ import {
   VStack,
   SimpleGrid,
   HStack,
+  Stack,
   Highlight,
+  AspectRatio,
+  Grid,
+  GridItem,
 } from '@chakra-ui/react';
 import { Container, SkeletonImage } from 'components/layouts';
 
@@ -48,82 +52,144 @@ const Solution01 = () => {
           介面層級梳理與優化
         </Text>
       </HStack>
-      <HStack w="100%" justify="center" spacing="40px">
-        <SkeletonImage src={mvp01} w="40%" rounded="sm" />
-        <Text w="40%">
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        w="100%"
+        justify="center"
+        align="center"
+        spacing={{ base: '12px', lg: '40px' }}
+      >
+        <SkeletonImage
+          src={mvp01}
+          w={{ base: '100%', md: '45%' }}
+          rounded="sm"
+        />
+        <Text
+          textStyle="text02"
+          color="whiteAlpha.900"
+          w={{ base: '100%', md: '45%' }}
+        >
           將介面上的資訊，將資訊劃分成操作層和顯示層，操作層布局為產品識別、階段提示、操作按鈕固定於介面下方。顯示層為主要與檢測者引導以及互動反饋。
         </Text>
-      </HStack>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} py="40px" spacingX="20px">
-        <VStack bgColor="blue.800" p="15px" rounded="md">
-          <Flex
-            w="100%"
-            h="80%"
-            rounded="md"
-            bgColor="rgba(255,255,255,0.3)"
-            align="center"
-            px="20px"
-          >
-            <Text color="white">資訊層</Text>
-          </Flex>
-          <Flex
-            bgColor="rgba(255,255,255,0.5)"
-            w="100%"
-            h="20%"
-            rounded="md"
-            align="center"
-            px="20px"
-          >
-            <Text color="blue.800">操作層</Text>
-          </Flex>
-        </VStack>
-        <SkeletonImage src={solution01demo01} rounded="sm" />
-      </SimpleGrid>
-      <Text maxW="720px" textAlign="center">
-        準備頁面為增強沉境感，提升檢測者的專注力，減去準備階段不需要的資訊，以品牌延伸色作為背景色大面積使用，讓使用聚焦於畫面中心。
-      </Text>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} py="40px" spacingX="20px">
-        <VStack bgColor="blue.800" p="15px" rounded="md">
-          <HStack w="100%" h="80%" rounded="md" align="center">
+      </Stack>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 2 }}
+        spacingX="20px"
+        spacingY="16px"
+        pt={{ base: '20px', lg: '40px' }}
+        pb={{ base: '12px', lg: '20px' }}
+      >
+        <AspectRatio w="100%" ratio={415 / 234}>
+          <VStack w="100%" bgColor="blue.800" p="15px" rounded="md">
             <Flex
-              h="100%"
-              w={1 / 3}
-              bgColor="rgba(255,255,255,0.2)"
+              w="100%"
+              h="80%"
               rounded="md"
-            ></Flex>
-            <Flex
-              h="100%"
-              w={1 / 3}
-              bgColor="rgba(255,255,255,0.5)"
+              bgColor="rgba(255,255,255,0.3)"
               align="center"
-              justify="center"
-              rounded="md"
+              px="20px"
             >
-              <Text textStyle="title0" color="blue.800">
-                顯示層
-              </Text>
+              <Text color="white">資訊層</Text>
             </Flex>
             <Flex
-              h="100%"
-              w={1 / 3}
-              bgColor="rgba(255,255,255,0.2)"
+              bgColor="rgba(255,255,255,0.5)"
+              w="100%"
+              h="20%"
               rounded="md"
+              align="center"
+              px="20px"
+            >
+              <Text color="blue.800">操作層</Text>
+            </Flex>
+          </VStack>
+        </AspectRatio>
+        <SkeletonImage w="100%" src={solution01demo01} rounded="sm" />
+      </SimpleGrid>
+      <Text
+        textStyle="text04"
+        maxW="720px"
+        textAlign="center"
+        color="whiteAlpha.800"
+      >
+        <Highlight
+          query={['減去', '聚焦於畫面中心']}
+          styles={{
+            mx: '1',
+            px: '1',
+            py: '0',
+            rounded: 'sm',
+            bg: 'blue.400',
+          }}
+        >
+          準備頁面為增強沉境感，提升檢測者的專注力，減去準備階段不需要的資訊，以品牌延伸色作為背景色大面積使用，讓使用聚焦於畫面中心。
+        </Highlight>
+      </Text>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 2 }}
+        spacingX="20px"
+        spacingY="16px"
+        pt={{ base: '20px', lg: '40px' }}
+        pb={{ base: '12px', lg: '20px' }}
+      >
+        <AspectRatio w="100%" ratio={415 / 234}>
+          <VStack bgColor="blue.800" p="15px" rounded="md">
+            <HStack w="100%" h="80%" rounded="md" align="center">
+              <Flex
+                h="100%"
+                w={1 / 3}
+                bgColor="rgba(255,255,255,0.2)"
+                rounded="md"
+              ></Flex>
+              <Flex
+                h="100%"
+                w={1 / 3}
+                bgColor="rgba(255,255,255,0.5)"
+                align="center"
+                justify="center"
+                rounded="md"
+              >
+                <Text textStyle="title0" color="blue.800">
+                  顯示層
+                </Text>
+              </Flex>
+              <Flex
+                h="100%"
+                w={1 / 3}
+                bgColor="rgba(255,255,255,0.2)"
+                rounded="md"
+              ></Flex>
+            </HStack>
+            <Flex
+              bgColor="rgba(255,255,255,0.2)"
+              w="100%"
+              h="20%"
+              rounded="md"
+              align="center"
+              px="20px"
             ></Flex>
-          </HStack>
-          <Flex
-            bgColor="rgba(255,255,255,0.2)"
-            w="100%"
-            h="20%"
-            rounded="md"
-            align="center"
-            px="20px"
-          ></Flex>
-        </VStack>
+          </VStack>
+        </AspectRatio>
         <SkeletonImage src={redesign01} rounded="sm" />
       </SimpleGrid>
-      <Text maxW="720px" textAlign="center">
-        檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境吸引專注力。將擷取畫面縮減至畫面約
-        1/3，讓受測者可以專注在正前方如同全身鏡。
+      <Text
+        textStyle="textStyle04"
+        maxW="720px"
+        textAlign="center"
+        color="whiteAlpha.800"
+      >
+        <Highlight
+          query={['分散專注力', '專注在正前方如同全身鏡']}
+          styles={{
+            mx: '1',
+            px: '1',
+            py: '0',
+            rounded: 'sm',
+            bg: 'blue.400',
+          }}
+        >
+          檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境分散專注力。將擷取畫面縮減至畫面約
+          1/3，讓受測者可以專注在正前方如同全身鏡。
+        </Highlight>
       </Text>
     </Flex>
   );
@@ -148,12 +214,39 @@ const Solution02 = () => {
           新增引導階段，以動畫輔助說明
         </Text>
       </HStack>
-      <SkeletonImage rounded="md" src={solution0201} />
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} py="20px" spacingX="20px">
-        <SkeletonImage rounded="md" src={walk} />
-        <SkeletonImage rounded="md" src={squat} />
-      </SimpleGrid>
-      <Text>藉由動畫來引導檢測民眾，同時降低教練(操作者)的解說工作量</Text>
+      <Grid
+        w="100%"
+        templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+        gap={{ base: '12px', lg: '10px' }}
+      >
+        <GridItem colSpan={2} rounded="md">
+          <AspectRatio w="100%" ratio={2 / 1}>
+            <SkeletonImage rounded="md" src={solution0201} />
+          </AspectRatio>
+        </GridItem>
+        <GridItem colSpan={1} rounded="md">
+          <AspectRatio w="100%" ratio={1 / 1}>
+            <SkeletonImage rounded="md" src={walk} />
+          </AspectRatio>
+        </GridItem>
+        <GridItem colSpan={1} rounded="md">
+          <SkeletonImage rounded="md" src={squat} />
+        </GridItem>
+      </Grid>
+      <Text textStyle="text04" color="whiteAlpha.800" mt="12px">
+        <Highlight
+          query={['解說負擔']}
+          styles={{
+            mx: '1',
+            px: '1',
+            py: '0',
+            rounded: 'sm',
+            bg: 'blue.400',
+          }}
+        >
+          藉由動畫來引導檢測民眾，同時減輕教練(操作者)的解說負擔
+        </Highlight>
+      </Text>
     </Flex>
   );
 };
@@ -177,22 +270,87 @@ const Solution03 = () => {
           檢測報告不僅提供結果，更提供檢測過程中的圖文數據
         </Text>
       </HStack>
-      <HStack w="100%" justify="center" spacing="40px">
-        <SkeletonImage src={mvp02} w="40%" rounded="sm" />
-        <Text w="40%">
-          舊分析報告只提供了動態分析判斷與基本判斷依據，不利於教練針對檢測者進行解說。除了提供解果外，並把影像與動作判斷依據抽取出來，讓教練可以客觀的資訊圖像解說取代原本的結果。首先將檢測結果依照類別拆成靜態分析(正面與側伸站姿)、動態分析(深蹲)。
-          靜態分析又分成了肌肉對稱緊繃分析、正面身體平衡、側面身體偏移，教練可以依照受測者狀態與自身專業判斷挑選項目進行說明
+      <Stack
+        w="100%"
+        justify="center"
+        align="center"
+        spacing={{ base: '12px', lg: '40px' }}
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <SkeletonImage
+          src={mvp02}
+          w={{ base: '100%', md: '45%' }}
+          rounded="sm"
+        />
+        <Text
+          textStyle="text03"
+          color="whiteAlpha.900"
+          w={{ base: '100%', md: '45%' }}
+        >
+          <Highlight
+            query={[
+              '運用客觀的資訊圖像',
+              '依照受測者狀態與自身專業判斷挑選項目進行說明',
+            ]}
+            styles={{
+              mx: '1',
+              px: '1',
+              py: '0',
+              rounded: 'sm',
+              bg: 'blue.400',
+            }}
+          >
+            舊報告僅提供了動態分析判斷與基本判斷依據，教練無法輕易的完成解說。將影像與動作判斷依據抽取，有利於教練運用客觀的資訊圖像來解說。首先將檢測結果依照類別分類為靜態分析(正面與側伸站姿)與動態分析(深蹲)。
+            靜態分析歸類出肌肉對稱緊繃分析、正面身體平衡、側面身體偏移，教練可以依照受測者狀態與自身專業判斷挑選項目進行說明
+          </Highlight>
         </Text>
-      </HStack>
+      </Stack>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} py="40px" spacingX="20px">
-        <SkeletonImage src={solution0301} rounded="sm" />
-        <SkeletonImage src={solution0302} rounded="sm" />
+        <VStack spacing={{ base: '8px', lg: '12px' }}>
+          <SkeletonImage src={solution0301} rounded="sm" />
+          <Text
+            textStyle="text04"
+            color="whiteAlpha.800"
+            px="20px"
+            textAlign="center"
+          >
+            <Highlight
+              query={['緊繃分析', '正面身體平衡', '側面身體偏移']}
+              styles={{
+                mx: '1',
+                px: '1',
+                py: '0',
+                rounded: 'sm',
+                bg: 'blue.500',
+              }}
+            >
+              將靜態分析技術關鍵提取出稱緊繃分析、正面身體平衡、側面身體偏移。教練可依照用戶狀況進行解說。
+            </Highlight>
+          </Text>
+        </VStack>
+        <VStack>
+          <SkeletonImage src={solution0302} rounded="sm" />
+          <Text
+            textStyle="text04"
+            color="whiteAlpha.800"
+            px="20px"
+            textAlign="center"
+          >
+            <Highlight
+              query={['']}
+              styles={{
+                mx: '1',
+                px: '1',
+                py: '0',
+                rounded: 'sm',
+                bg: 'blue.500',
+              }}
+            >
+              動態分析保留原本的身體結果圖，加強圖解的提示，並搭配動作截圖，讓教練選擇是否回放影片。
+            </Highlight>
+          </Text>
+        </VStack>
       </SimpleGrid>
-
-      <Text maxW="720px" textAlign="center">
-        檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境吸引專注力。將擷取畫面縮減至畫面約
-        1/3，讓受測者可以專注在正前方如同全身鏡。
-      </Text>
     </Flex>
   );
 };
@@ -217,16 +375,38 @@ const Solution04 = () => {
         </Text>
       </HStack>
 
-      <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} py="40px" spacingX="20px">
+      <SimpleGrid
+        columns={{ base: 4, md: 4, lg: 4 }}
+        spacingX={{ base: '12px', lg: '20px' }}
+      >
         <SkeletonImage src={solution0401} rounded="sm" />
         <SkeletonImage src={solution0402} rounded="sm" />
         <SkeletonImage src={solution0403} rounded="sm" />
         <SkeletonImage src={solution0404} rounded="sm" />
       </SimpleGrid>
 
-      <Text maxW="720px" textAlign="center">
-        檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境吸引專注力。將擷取畫面縮減至畫面約
-        1/3，讓受測者可以專注在正前方如同全身鏡。
+      <Text
+        textStyle="text04"
+        color="whiteAlpha.800"
+        maxW="720px"
+        textAlign="center"
+        mt="12px"
+      >
+        <Highlight
+          query={['更能意識到體態問題']}
+          styles={{
+            mx: '1',
+            px: '1',
+            py: '0',
+            rounded: 'sm',
+            bg: 'blue.400',
+          }}
+        >
+          輔助線是 AI
+          分析體態的依據之一。檢測的過程中無論是場館人員或是民眾都會因為AI
+          輔助線即時的出現於偵測畫面中，視覺上理解 AI
+          運作中。此體驗認知運用在報告呈現上，檢測照片加上輔助線讓教練能更容易地闡述體態狀況，聆聽的民眾因為說明與輔助線更能意識到體態問題。
+        </Highlight>
       </Text>
     </Flex>
   );
@@ -251,11 +431,17 @@ const Solution05 = () => {
           掃描 QR code ，取得個人報告
         </Text>
       </HStack>
-      <SkeletonImage maxW="700px" src={solution05} rounded="sm" />
+      <SkeletonImage w="100%" maxW="700px" src={solution05} rounded="sm" />
 
-      <Text maxW="720px" textAlign="center">
-        檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境吸引專注力。將擷取畫面縮減至畫面約
-        1/3，讓受測者可以專注在正前方如同全身鏡。
+      <Text
+        pt="12px"
+        textStyle="text04"
+        color="whiteAlpha.900"
+        maxW="720px"
+        textAlign="center"
+      >
+        場館方可以透過教練解說來推薦體驗者加入會員或購課。掃描 QR
+        code，讓民眾主動採取行動增加再行銷的機會點。
       </Text>
     </Flex>
   );
@@ -277,31 +463,43 @@ const Solution06 = () => {
           06
         </Flex>
         <Text textStyle="title1" color="white">
-          在服務場景之中提供與誘發民眾體育與健康需求
+          在服務場景中提供且誘發民眾體育與健康需求
         </Text>
       </HStack>
-      <Text textStyle="text01" color="white">
+      <Text w="100%" textStyle="text01" color="whiteAlpha.900">
         <Highlight
-          query="產生需求後利於場館可以進一步為民眾進行互動與服務"
+          query={['產生需求', '進行互動與服務']}
           styles={{ px: '1', py: '1', bg: 'blue.700', color: 'white' }}
         >
-          在日常中大眾不易關注自身體態與動作狀況，而在場館的療體驗上教練或物理治療師缺乏圖像說明工具把自己專業觀察表達給客戶了解。透過檢測讓民眾透過影像紀錄與
+          在日常中大眾少有機會留意自身體態與動作狀況，場館原先體驗流程中教練或物理治療師缺乏圖像說明工具把自己專業觀察表達給客戶了解。透過檢測讓民眾透過影像紀錄與
           AI
-          輔助線引導誘發健身或治療調整需求。產生需求後利於場館可以進一步為民眾進行互動與服務
+          輔助線引導誘發健身或治療調整需求。產生需求後利於場館可以進一步為民眾進行互動與服務。
         </Highlight>
       </Text>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} py="40px" spacingX="20px">
-        <SkeletonImage src={solution0601} rounded="sm" />
-        <VStack align="center" justify="center" spacing="20px">
-          <SkeletonImage src={solution0602} rounded="sm" />
-          <SkeletonImage src={solution0603} rounded="sm" />
+      <SimpleGrid
+        w="100%"
+        pt={{ base: '12px', lg: '20px' }}
+        pb="40px"
+        columns={{ base: 1, md: 2, lg: 2 }}
+        spacingX="20px"
+        spacingY={{ base: '12px', lg: '20px' }}
+      >
+        <SkeletonImage
+          w="100%"
+          h={{ base: '280px', lg: 'unset' }}
+          objectFit="cover"
+          src={solution0601}
+          rounded="sm"
+        />
+        <VStack
+          align="center"
+          justify="center"
+          spacing={{ base: '12px', lg: '20px' }}
+        >
+          <SkeletonImage w="100%" src={solution0602} rounded="sm" />
+          <SkeletonImage w="100%" src={solution0603} rounded="sm" />
         </VStack>
       </SimpleGrid>
-
-      <Text maxW="720px" textAlign="center">
-        檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境吸引專注力。將擷取畫面縮減至畫面約
-        1/3，讓受測者可以專注在正前方如同全身鏡。
-      </Text>
     </Flex>
   );
 };
@@ -314,13 +512,13 @@ const Solution = () => {
           Approaching a Solution
         </Text>
       </Flex>
-      <VStack spacing="80px">
+      <VStack spacing={{ base: '32px', lg: '72px' }}>
         <Solution01 />
         <Solution02 />
         <Solution03 />
         <Solution04 />
-        <Solution06 />
         <Solution05 />
+        <Solution06 />
       </VStack>
     </Container>
   );

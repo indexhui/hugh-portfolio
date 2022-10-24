@@ -13,7 +13,7 @@ const taskList = [
     content:
       '產品 MVP 最初是建立在特地產館的服務，存在許多易用性問題與資訊架構混亂需重新規劃: 產品介面、文宣手冊等',
     image: task02,
-    isMain: true,
+    // isMain: true,
   },
   {
     title: '品牌識別',

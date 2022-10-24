@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <MotionFlex
       ref={ref}
-      h={window.innerHeight * 2}
+      h={window.innerHeight * 1.75}
       position="relative"
       bg="#4C7E85"
     >

@@ -11,7 +11,7 @@ import project03 from 'assets/images/project03.jpg';
 const projectList = [
   {
     title: 'Crosspoint  AI 體態分析 ',
-    subTitle: '運健檢測系統',
+    subTitle: '運動檢測系統',
     tag: 'App Design, UI/UX Design, User Research',
     img: project02,
     link: '/crosspoint',

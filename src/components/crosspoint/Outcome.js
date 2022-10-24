@@ -42,8 +42,8 @@ const Outcome = () => {
           py="20px"
         >
           <SimpleGrid
-            columns={{ base: 1, lg: 2 }}
-            spacingX="30px"
+            columns={{ base: 2, lg: 2 }}
+            spacingX={{ base: '12px', lg: '20px' }}
             spacingY="12px"
           >
             <SkeletonImage w="100%" src={outcome01} rounded="md" />
@@ -57,13 +57,15 @@ const Outcome = () => {
           />
         </SimpleGrid>
       </Container>
-      <Container bgColor="grey.100" my="0px" pb="40px">
+      <Container bgColor="grey.100" pb="40px">
         <Grid
           w="100%"
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
-          gap={10}
+          gap={{ base: '0', lg: '20px' }}
         >
           <GridItem
+            mb={{ base: '12px', lg: '0' }}
+            w="100%"
             colSpan={1}
             border="1px solid"
             borderColor="grey.500"

@@ -30,10 +30,16 @@ const textStyles = {
   text03: {
     color: 'grey.700',
     fontWeight: '300',
-    lineHeight: '1.8',
+    lineHeight: '1.6',
     fontSize: { base: '14px', lg: '18px' },
   },
   text04: {
+    color: 'grey.700',
+    fontWeight: '300',
+    lineHeight: '1.5',
+    fontSize: { base: '14px', lg: '16px' },
+  },
+  text05: {
     color: 'grey.700',
     fontWeight: '300',
     lineHeight: '1.8',
