@@ -6,6 +6,7 @@ import {
   VStack,
   SimpleGrid,
   HStack,
+  Link,
 } from '@chakra-ui/react';
 
 import { Container } from 'components/layouts';
@@ -33,12 +34,20 @@ const CurrentProject = () => {
           rounded="md"
         >
           <Text textStyle="title1">UX Navigate</Text>
-          <Text textStyle="text02">
-            打造UIUX 領域自學者的資源指南以及中文網站靈感收集
+          <Text textStyle="text04">
+            打造UIUX
+            領域自學者的資源指南以及中文網站靈感收集，自己以專案主與開發者身分的
+            side project。
           </Text>
           <HStack>
-            <Text textStyle="text02">前往</Text>
-            <Text textStyle="text02">了解故事</Text>
+            <Link
+              variant="link03"
+              href="https://www.uishowreel.com/resource/web-collection"
+              isExternal
+            >
+              <Text>前往</Text>
+            </Link>
+            {/* <Text textStyle="text02">了解故事</Text> */}
           </HStack>
         </VStack>
         <VStack
@@ -51,10 +60,10 @@ const CurrentProject = () => {
           rounded="md"
         >
           <Text textStyle="title1">學米 UI 業師諮詢</Text>
-          <Text textStyle="text02">
-            在學米擔任業師，提供學生作品上的建議與職涯解惑
+          <Text textStyle="text04">
+            替轉職與學生 UIUX 領域學習諮詢，提供作業與履歷建議，找出學習盲點。
+            諮詢次數來到 300 次，且及間幫助多位學生應徵上理想職缺。
           </Text>
-          <Text textStyle="text02">諮詢次數: 300</Text>
         </VStack>
         <VStack
           w="100%"
@@ -65,11 +74,10 @@ const CurrentProject = () => {
           p="20px"
           rounded="md"
         >
-          <Text textStyle="title1">學米 UI 業師諮詢</Text>
-          <Text textStyle="text02">
-            在學米擔任業師，提供學生作品上的建議與職涯解惑
+          <Text textStyle="title1">PickUp design 社群經營</Text>
+          <Text textStyle="text04">
+            PickUp design 為千人的設計師 Line 群，目前負責社群資料庫的規劃
           </Text>
-          <Text textStyle="text02">諮詢次數: 300</Text>
         </VStack>
       </SimpleGrid>
     </Container>

@@ -15,6 +15,14 @@ const Link = {
         textDecoration: 'none',
       },
     },
+    link03: {
+      fontWeight: '500',
+      color: 'blue.700',
+      _hover: {
+        color: 'blue.600',
+        textDecoration: 'none',
+      },
+    },
   },
 };
 
