@@ -63,9 +63,15 @@ const Hero = () => {
         align="center"
         overflow="hidden"
       >
-        <Flex w="75%" h="50%" direction="column" justify="space-around">
+        <Flex
+          zIndex="1"
+          w="75%"
+          h="50%"
+          direction="column"
+          justify="space-around"
+        >
           <Flex
-            w="55%"
+            w={{ base: '100%', lg: '55%' }}
             direction="column"
             color={bgIsDark ? 'gray.200' : '#222'}
           >
@@ -89,6 +95,7 @@ const Hero = () => {
           </Flex>
         </Flex>
         <MotionImage
+          opacity={{ base: '0.5', lg: '0.7' }}
           top="30vh"
           h="40vh"
           src={heroImg}

@@ -31,7 +31,7 @@ const ProblemDiscovery = () => {
           Problem Discovery
         </Text>
       </Flex>
-      <Text fontSize="3xl" w="100%" pt="24px">
+      <Text textStyle="heading01" w="100%" pt="24px">
         <Highlight query="圖像" styles={{ px: '1', py: '1', bg: 'orange.100' }}>
           社群創作者們善於用圖像的力量向受眾傳遞價值
         </Highlight>
@@ -45,7 +45,13 @@ const ProblemDiscovery = () => {
       </Text>
       {/* 從先前專案中發現需求 */}
       <Flex direction="column" py="50px" w="100%">
-        <Text color="gray.700" fontWeight="500" letterSpacing="0.2em" pb="20px">
+        <Text
+          textStyle="title1"
+          color="gray.700"
+          fontWeight="500"
+          letterSpacing="0.2em"
+          pb="20px"
+        >
           從先前專案中發現需求
         </Text>
         <Flex w="100%" wrap="wrap">
@@ -67,7 +73,7 @@ const ProblemDiscovery = () => {
           </Flex>
           <Flex w={{ base: '100%', lg: '50%' }} align="center">
             <VStack align="flex-start" px="12px">
-              <Text variant="body">
+              <Text textStyle="text03">
                 <Highlight
                   query={['完成付款', ' IG 的導流狀況']}
                   styles={{ px: '1', py: '1', bg: 'orange.100' }}
@@ -87,7 +93,7 @@ const ProblemDiscovery = () => {
           <Text color="gray.700" fontWeight="500" letterSpacing="0.2em">
             IG 上的導流不易
           </Text>
-          <Text align="left" variant="body">
+          <Text align="left" textStyle="text03">
             大部分的社群平台像是 Instagram 不鼓勵附上過多的外部連結， <br />
             這導致創作者在讓導流過程中會仰賴個人主頁與限時動態 <br />
             因此驅使 Link-in- Bio 工具誕生
@@ -127,75 +133,96 @@ const ProblemDiscovery = () => {
       </Flex>
       {/* 訪談李白 */}
       <Flex direction="column" py="30px">
-        <Text color="gray.700" fontWeight="500" letterSpacing="0.2em" pb="20px">
+        <Text
+          textStyle="text03"
+          color="gray.700"
+          fontWeight="500"
+          letterSpacing="0.2em"
+          pb="20px"
+        >
           訪談中，了解現行的 Link-In-Bio 無法滿足創作者的需求
         </Text>
         <Flex
           direction="column"
           bg="grey.300"
           w="100%"
-          py="50px"
+          py={{ base: '24px', lg: '48px' }}
           justify="center"
           align="center"
         >
-          <Flex justify="center">
-            <VStack>
-              <Image w="80px" h="80px" src={lee} rounded="full" />
+          <Flex justify="center" direction={{ base: 'column', lg: 'row' }}>
+            <VStack pb={{ base: '20px', lg: '0' }}>
+              <Image
+                w={{ base: '60px', lg: '80px' }}
+                h={{ base: '60px', lg: '80px' }}
+                src={lee}
+                rounded="full"
+              />
               <Text>街頭故事 李白</Text>
             </VStack>
-            <VStack w="70%" spacing="20px">
+            <VStack w={{ base: '100%', lg: '70%' }} spacing="20px">
               <Flex
-                w="85%"
+                w={{ base: '90%', lg: '85%' }}
                 bg="blue.700"
                 borderRadius="0 15px 15px 15px"
-                p="20px"
+                p={{ base: '12px', lg: '20px' }}
               >
-                <Text color="white">
-                  收入來源有很多種，所以會有很多不一樣的網站、業主，也都會有不一樣的需求。我需要有個地方像抽屜一樣，把我的作品、我提供的服務都整理收集在一起，讓不同需求的人有一個平台來觀看、取得他們需要的資訊
+                <Text textStyle="text04" color="white">
+                  收入來源有很多種，所以會有很多不一樣的網站、業主，也都會有不一樣的需求。我需要有個地方像抽屜一樣，把我的作品、我提供的服務都整理收集在一起，讓不同需求的人有一個平台來觀看、取得他們需要的資訊。
                 </Text>
               </Flex>
-              <HStack w="85%">
-                <HStack
+              <HStack w="85%" align="flex-start">
+                <Stack
+                  direction={{ base: 'column', lg: 'row' }}
+                  color="grey.700"
                   w="100%"
                   bg="white"
-                  color="blue.700"
                   borderRadius="15px 0 15px 15px"
-                  p="20px"
+                  p={{ base: '12px', lg: '20px' }}
                   align="flex-start"
                 >
                   <Icon mt="px" as={HiOutlineLightBulb} />
-                  <Text color="blue.700">
+                  <Text textStyle="text04">
                     有許多不種類型的連結，需要有效的分區塊安排各個類型
                   </Text>
-                </HStack>
-                <Image w="48px" src={hughAvatar} rounded="full" />
+                </Stack>
+                <Image
+                  w={{ base: '30px', lg: '48px' }}
+                  src={hughAvatar}
+                  rounded="full"
+                />
               </HStack>
               <Flex
-                w="85%"
+                w={{ base: '90%', lg: '85%' }}
+                p={{ base: '12px', lg: '20px' }}
                 bg="blue.700"
                 borderRadius="0 15px 15px 15px"
-                p="20px"
               >
-                <Text color="white">
+                <Text textStyle="text04" color="white">
                   一般 Link-In-Bio 這種平台或網站，
                   大部分多以文字為主，加上會有很多東西不能己隨心所欲去調整。
                 </Text>
               </Flex>
-              <HStack w="85%">
-                <HStack
+              <HStack w="85%" align="flex-start">
+                <Stack
+                  direction={{ base: 'column', lg: 'row' }}
+                  p={{ base: '12px', lg: '20px' }}
                   w="100%"
                   bg="white"
                   color="grey.700"
                   borderRadius="15px 0 15px 15px"
-                  p="20px"
                   align="flex-start"
                 >
                   <Icon mt="px" as={HiOutlineLightBulb} />
-                  <Text color="grey.700">
+                  <Text color="grey.700" textStyle="text04">
                     對創作者來說他們需要圖文搭配和調整的空間
                   </Text>
-                </HStack>
-                <Image w="48px" src={hughAvatar} rounded="full" />
+                </Stack>
+                <Image
+                  w={{ base: '30px', lg: '48px' }}
+                  src={hughAvatar}
+                  rounded="full"
+                />
               </HStack>
             </VStack>
           </Flex>
