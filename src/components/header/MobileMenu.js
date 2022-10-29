@@ -4,18 +4,19 @@ import {
   Flex,
   Link,
   Image,
-  HStack,
-  StackDivider,
   useDisclosure,
   VStack,
   Box,
   Text,
   useOutsideClick,
+  HStack,
+  Icon,
 } from '@chakra-ui/react';
 
 import { Link as RouterLink } from 'react-router-dom';
 
 import { CloseIcon } from '@chakra-ui/icons';
+import { FiDownload } from 'react-icons/fi';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -27,7 +28,7 @@ const MotionFlex = motion(Flex);
 //   return ()
 // }
 
-const MobileMenu = () => {
+const MobileMenu = ({ handleDownload }) => {
   const ref = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
   useOutsideClick({
@@ -106,13 +107,16 @@ const MobileMenu = () => {
                 </Text>
               </RouterLink>
               <Link
-                onClick={onClose}
-                href="https://www.dropbox.com/s/d1hqrbosrglbc9i/Hugh_Resume.pdf?dl=0"
+                onClick={handleDownload}
+                // href="https://www.dropbox.com/s/d1hqrbosrglbc9i/Hugh_Resume.pdf?dl=0"
                 isExternal
               >
-                <Text fontSize="18px" fontWeight="500">
-                  Resume
-                </Text>
+                <HStack spacing="2px">
+                  <Text fontSize="18px" fontWeight="500">
+                    Resume
+                  </Text>
+                  <Icon as={FiDownload} />
+                </HStack>
               </Link>
             </VStack>
           </MotionFlex>

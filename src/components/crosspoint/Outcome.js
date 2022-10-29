@@ -112,9 +112,9 @@ const Outcome = () => {
                   </Flex>
                 </VStack>
                 <VStack align="flex-start" w="50%">
-                  <Text>成交產值</Text>
+                  <Text>間接產值</Text>
                   <Flex w="100%" justify="space-between">
-                    <Text>因檢測而預約體驗</Text>
+                    <Text>曾經預約和續約戶</Text>
                     <Text>$251180</Text>
                   </Flex>
                 </VStack>

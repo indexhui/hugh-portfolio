@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
@@ -8,6 +8,7 @@ import {
   Text,
   Image,
   Link,
+  Icon,
   Menu,
   MenuButton,
   MenuList,
@@ -15,7 +16,8 @@ import {
   useDisclosure,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { FiDownload } from 'react-icons/fi';
 
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -94,6 +96,14 @@ const Header = props => {
   const [isLargerThan980] = useMediaQuery('(min-width: 980px)');
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleDownload = useCallback(() => {
+    const a = document.createElement('a');
+    a.download = 'Hugh_Resume';
+    a.href = `/Hugh_Resume.pdf`;
+    a.click();
+    // eslint-disable-next-line
+  }, []);
 
   const handleScroll = () => {
     const element = document.getElementById('works');
@@ -183,16 +193,15 @@ const Header = props => {
                 About
               </Text>
             </RouterLink>
-            <Link
-              variant="link02"
-              href="https://www.dropbox.com/s/d1hqrbosrglbc9i/Hugh_Resume.pdf?dl=0"
-              isExternal
-            >
-              <Text _hover={{ color: 'blue.600' }}>Resume</Text>
+            <Link onClick={handleDownload} variant="link02">
+              <HStack spacing="2px">
+                <Text _hover={{ color: 'blue.600' }}>Resume</Text>
+                <Icon as={FiDownload} w="14px" />
+              </HStack>
             </Link>
           </HStack>
         ) : (
-          <MobileMenu />
+          <MobileMenu handleDownload={handleDownload} />
         )}
       </Flex>
     </MotionFlex>

@@ -1,12 +1,10 @@
 import {
   Flex,
   Text,
-  Stack,
   VStack,
   HStack,
   Heading,
   Highlight,
-  chakra,
   Image,
   Link,
   Icon,

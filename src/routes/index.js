@@ -4,7 +4,6 @@ import { AnimatePresence } from 'framer-motion';
 
 import {
   HomePage,
-  WorkPage,
   RealenginePage,
   CrosspointPage,
   PortalyPage,
