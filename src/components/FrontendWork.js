@@ -10,35 +10,30 @@ import {
 
 import { Container, SkeletonImage } from 'components/layouts';
 
-import womany from 'assets/images/works/womany.jpg';
-import taiwanbar from 'assets/images/works/taiwanbar.jpg';
-import school from 'assets/images/works/school.jpg';
+import z from 'assets/images/works/z.jpg';
+import samurai from 'assets/images/works/samurai.jpg';
+import gold from 'assets/images/works/gold.jpg';
 
 const workList = [
   {
-    title: '女人迷 EC 電商 2017',
+    title: '互動特效官網',
     link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
-    image: womany,
-    linear: 'linear-gradient(0deg, #615A7E 0%, rgba(105, 80, 176, 0) 100%)',
+    image: z,
+    linear: 'linear-gradient(0deg, #01FEA050 0%, rgba(105, 80, 176, 0) 100%)',
   },
   {
-    title: '台灣吧訂閱式集資官網 2017',
+    title: '日式文化地圖',
     link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
-    image: taiwanbar,
+    image: samurai,
     linear: 'linear-gradient(0deg, #654404 0%, rgba(182, 144, 9, 0) 100%)',
   },
   {
-    title: '新加坡兒美官網 2017',
+    title: '2022礦山藝術季',
     link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
-    image: school,
+    image: gold,
     linear: 'linear-gradient(0deg, #002B46 0%, rgba(9, 80, 125, 0) 100%)',
   },
 ];
-
-// background-color: #e5e5f7;
-// opacity: 0.8;
-// background-image:  linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
-// background-size: 20px 20px;
 
 const WorkCard = props => {
   const { title, link, image, linear } = props;
@@ -70,13 +65,7 @@ const WorkCard = props => {
   );
 };
 
-// background-color: #e5e5f7;
-// opacity: 0.8;
-// background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-// background-size: 20px 20px;
-// background-position: 0 0,10px 10px;
-
-const FreelanceWork = () => {
+const FrontendWork = () => {
   return (
     <Flex
       py={{ base: '32px', lg: '48px' }}
@@ -87,11 +76,10 @@ const FreelanceWork = () => {
     >
       <Container>
         <VStack w="100%" pb="20px" spacing="5px">
-          <Text textStyle="heading01">FreelanceWork</Text>
+          <Text textStyle="heading01">Front-end Works</Text>
           <Text textStyle="text03" textAlign="center" maxW="700px">
-            2017 全職自由接案者約一年左右，
-            <br />
-            合作過的對象和公司有女人迷、台灣吧、UX設計師 Jenny Shen
+            在2022 上半年以前端工程師身分任職於 The Z Institute。並下半年以
+            freelance 身分接觸各類前端專案
           </Text>
         </VStack>
         <SimpleGrid
@@ -109,4 +97,4 @@ const FreelanceWork = () => {
   );
 };
 
-export default FreelanceWork;
+export default FrontendWork;
