@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Flex } from '@chakra-ui/react';
 import Hero from 'components/home/Hero';
+import SelfIntroduction from 'components/about/SelfIntroduction';
 import DesignProjectList from 'components/home/DesignProjectList';
 
 export function HomePage() {
@@ -24,7 +25,8 @@ export function HomePage() {
   }, []);
   return (
     <Flex w="100%" direction="column">
-      <Hero />
+      {/* <Hero /> */}
+      <SelfIntroduction />
       <DesignProjectList />
     </Flex>
   );

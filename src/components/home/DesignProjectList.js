@@ -42,14 +42,9 @@ const projectList = [
 
 const DesignProjectList = () => {
   return (
-    <Flex
-      id="works"
-      w="100%"
-      justify="center"
-      py={{ base: '48px', lg: '32px' }}
-    >
+    <Flex id="works" w="100%" justify="center" py={{ base: '48px', lg: '60x' }}>
       <Container>
-        <Heading as="h2" py="40px">
+        <Heading as="h2" pb="40px">
           設計案例
         </Heading>
         <VStack w="100%" maxW="1220px" spacing={{ base: '16px', lg: '48px' }}>
