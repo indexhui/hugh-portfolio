@@ -24,7 +24,7 @@ const introduction = [
     content: '兩年三個月 / Feb. 2019 - April 2021',
   },
   {
-    title: '我得角色',
+    title: '我的角色',
     content: '產品設計師',
   },
   {

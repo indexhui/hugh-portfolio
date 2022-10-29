@@ -45,12 +45,13 @@ const WorkCard = props => {
   return (
     <AspectRatio as={Link} href={link} ratio={400 / 250} isExternal>
       <Flex
+        shadow="md"
+        rounded="md"
         bgImage={image}
         bgPosition="center"
         bgSize="
       cover"
         w="100%"
-        rounded="sm"
         align="flex-end"
       >
         <Flex w="100%" h="100%" align="flex-end">
@@ -79,7 +80,7 @@ const WorkCard = props => {
 const FreelanceWork = () => {
   return (
     <Flex
-      py={{ base: '32px', lg: '48px' }}
+      pt={{ base: '32px', lg: '60px' }}
       bgColor="white"
       // bgImage="linear-gradient(#f0f0f0 1px, transparent 1px), linear-gradient(to right, #f0f0f0 1px, white 1px)"
       bgImage="radial-gradient(#bfbfbf 0.5px, transparent 0.5px), radial-gradient(#bfbfbf 0.5px, white 0.5px)"

@@ -40,12 +40,13 @@ const WorkCard = props => {
   return (
     <AspectRatio as={Link} href={link} ratio={400 / 250} isExternal>
       <Flex
+        shadow="md"
+        rounded="md"
         bgImage={image}
         bgPosition="center"
         bgSize="
       cover"
         w="100%"
-        rounded="sm"
         align="flex-end"
       >
         <Flex w="100%" h="100%" align="flex-end">
