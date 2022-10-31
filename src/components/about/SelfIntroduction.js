@@ -148,7 +148,7 @@ const SelfIntroduction = () => {
             >
               <Text>大家好，我是 Hugh，一位擅長前端、UI/UX 的產品設計師。</Text>
               <Text>
-                我目前是 Freelane 前端工程師 / 產品設計師。我過去經歷包括在
+                我目前是 Freelance 前端工程師 / 產品設計師。我過去經歷包括在
                 zinstitute 擔任前端工程師，在 Crosspoint AI
                 擔任產品設計師，在日本寶可夢擔任卡牌平面設計師。我擁有工藝設計學士學位。
               </Text>

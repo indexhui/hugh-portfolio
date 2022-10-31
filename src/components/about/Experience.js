@@ -8,12 +8,15 @@ import {
   Link,
   chakra,
   Box,
+  Icon,
 } from '@chakra-ui/react';
 
 import { Link as RouterLink } from 'react-router-dom';
 
 import { Container, Span } from 'components/layouts';
 import ExperienceCard from './ExperienceCard';
+
+import { BsDot } from 'react-icons/bs';
 
 import institute from 'assets/images/about/institute.jpg';
 import real from 'assets/images/about/real.jpg';
@@ -22,9 +25,9 @@ import sov from 'assets/images/about/sov.jpg';
 
 const InstituteContent = () => {
   return (
-    <VStack align="flex-start" w="100%" pt="12px">
+    <VStack align="flex-start" w="100%" pt="12px" spacing="0px">
       <Box textStyle="text02">
-        <Span>任職期間，製作</Span>
+        <Span>・製作</Span>
         <Link
           fontWeight="400"
           variant="link02"
@@ -41,11 +44,16 @@ const InstituteContent = () => {
             互動式特效官網
           </chakra.span>
         </Link>
-        <chakra.span>
-          ，串接表單等功能並建構 CSV
-          內容管理流程，並以網站熱點圖分析工具優化資訊安排。開發 React
-          前端工程師 Web 3 開發實戰班課程教材模板。
-        </chakra.span>
+        <Span>，串接表單、訂閱信等功能。</Span>
+      </Box>
+      <Box textStyle="text02">
+        <Span>・建構 CSV 內容管理流程，讓課程部門可以定時輪替內容</Span>
+      </Box>
+      <Box textStyle="text02">
+        <Span>・運用 Clarity 網站熱點圖分析工具優化資訊安排。</Span>
+      </Box>
+      <Box textStyle="text02">
+        <Span>・開發 React 前端工程師 Web 3 開發實戰班課程教材模板。</Span>
       </Box>
     </VStack>
   );
