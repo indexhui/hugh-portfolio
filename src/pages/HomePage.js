@@ -6,6 +6,8 @@ import { Flex } from '@chakra-ui/react';
 import Hero from 'components/home/Hero';
 import SelfIntroduction from 'components/about/SelfIntroduction';
 import DesignProjectList from 'components/home/DesignProjectList';
+import FreelanceWork from 'components/FreelanceWork';
+import FrontendWork from 'components/FrontendWork';
 
 export function HomePage() {
   const location = useLocation();
@@ -28,6 +30,8 @@ export function HomePage() {
       {/* <Hero /> */}
       <SelfIntroduction />
       <DesignProjectList />
+      <FreelanceWork />
+      <FrontendWork />
     </Flex>
   );
 }

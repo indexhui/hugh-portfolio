@@ -42,7 +42,12 @@ const projectList = [
 
 const DesignProjectList = () => {
   return (
-    <Flex id="works" w="100%" justify="center" py={{ base: '48px', lg: '60x' }}>
+    <Flex
+      id="works"
+      w="100%"
+      justify="center"
+      py={{ base: '48px', lg: '72px' }}
+    >
       <Container>
         <Heading as="h2" pb="40px">
           設計案例

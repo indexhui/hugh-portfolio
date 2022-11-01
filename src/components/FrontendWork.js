@@ -70,6 +70,7 @@ const FrontendWork = () => {
   return (
     <Flex
       py={{ base: '32px', lg: '48px' }}
+      pb={{ base: '48px', lg: '72px' }}
       bgColor="white"
       // bgImage="linear-gradient(#f0f0f0 1px, transparent 1px), linear-gradient(to right, #f0f0f0 1px, white 1px)"
       bgImage="radial-gradient(#bfbfbf 0.5px, transparent 0.5px), radial-gradient(#bfbfbf 0.5px, white 0.5px)"
