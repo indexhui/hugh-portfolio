@@ -11,7 +11,7 @@ const taskList = [
   {
     title: '檢測系統',
     content:
-      '產品 MVP 最初是建立在特地產館的服務，存在許多易用性問題與資訊架構混亂需重新規劃: 產品介面、文宣手冊等',
+      '產品 MVP 最初是建立在特定場館的服務，存在許多易用性問題與資訊架構混亂需重新規劃: 產品介面、文宣手冊等',
     image: task02,
     // isMain: true,
   },
@@ -53,7 +53,7 @@ const Background = () => {
       <VStack w="100%" py="30px" align="flex-start">
         <Text textStyle="title0">Task</Text>
         <Text textStyle="text01">
-          作為團隊首位設計師，了解團隊特性以及熟悉運動產業從後，制定四個面向階段任務，首要為品牌識別與檢測服務重設計，接續規劃
+          作為團隊首位設計師，了解團隊特性以及熟悉運動產業從後，制訂四個面向階段任務，首要為品牌識別與檢測服務重設計，接續規劃
           SaaS會員/教練管理與日後推出新功能研究。
         </Text>
         <Text>本篇主軸介紹檢測系統 Redesign 的過程。</Text>
