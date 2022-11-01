@@ -43,14 +43,12 @@ const ProjectCard = props => {
         w={{ base: '100%', lg: '60%' }}
         px={{ lg: '24px' }}
         align="flex-start"
-        spacing={{ base: '2px', lg: '12px' }}
+        spacing={{ base: '4px', lg: '12px' }}
       >
-        <Text textStyle="text01" fontWeight="600">
-          {props.title}
-        </Text>
-        <Text textStyle="text02" color="grey.700">
-          {props.subTitle}
-        </Text>
+        <VStack spacing={{ base: '0px', lg: '0px' }} align="flex-start">
+          <Text textStyle="title1">{props.subTitle}</Text>
+          <Text textStyle="text03">{props.title}</Text>
+        </VStack>
         <Text textStyle="text04" color="blue.700">
           {props.tag}
         </Text>
