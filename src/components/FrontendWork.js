@@ -17,19 +17,19 @@ import gold from 'assets/images/works/gold.jpg';
 const workList = [
   {
     title: '互動特效官網',
-    link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
+    link: 'https://zinstitute.net/zh',
     image: z,
     linear: 'linear-gradient(0deg, #01FEA050 0%, rgba(105, 80, 176, 0) 100%)',
   },
   {
     title: '日式文化地圖',
-    link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
+    link: 'https://yamato.katanansamurai.art/',
     image: samurai,
     linear: 'linear-gradient(0deg, #654404 0%, rgba(182, 144, 9, 0) 100%)',
   },
   {
     title: '2022礦山藝術季',
-    link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
+    link: 'https://www.mineartfestival.com/',
     image: gold,
     linear: 'linear-gradient(0deg, #002B46 0%, rgba(9, 80, 125, 0) 100%)',
   },
