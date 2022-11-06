@@ -35,14 +35,14 @@ const CurrentProject = () => {
         >
           <Text textStyle="title1">UX Navigate</Text>
           <Text textStyle="text04">
-            打造UIUX
+            打造 UIUX
             領域自學者的資源指南以及中文網站靈感收集，自己以專案主與開發者身分的
             side project。
           </Text>
           <HStack>
             <Link
               variant="link03"
-              href="https://www.uishowreel.com/resource/web-collection"
+              href="https://www.uishowreel.com/"
               isExternal
             >
               <Text>前往</Text>
@@ -61,8 +61,8 @@ const CurrentProject = () => {
         >
           <Text textStyle="title1">學米 UI 業師諮詢</Text>
           <Text textStyle="text04">
-            替轉職與學生 UIUX 領域學習諮詢，提供作業與履歷建議，找出學習盲點。
-            諮詢次數來到 300 次，且及間幫助多位學生應徵上理想職缺。
+            替轉職與學生 UIUX 學習諮詢，提供作業與履歷建、找出學習盲點。
+            諮詢次數 300 次以上，期間幫助多位學生達成就職。
           </Text>
         </VStack>
         <VStack
