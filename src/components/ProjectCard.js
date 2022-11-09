@@ -1,5 +1,14 @@
-import { Flex, Text, VStack, Image, AspectRatio } from '@chakra-ui/react';
+import {
+  Flex,
+  Text,
+  VStack,
+  Image,
+  AspectRatio,
+  Link,
+  HStack,
+} from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
 import { motion } from 'framer-motion';
 
@@ -54,6 +63,12 @@ const ProjectCard = props => {
         </Text>
         <Text textStyle="text04">{props.content}</Text>
         <Text>{isNeedPassword ? '需要密碼' : ''}</Text>
+        <Link as={RouterLink} to={props.link}>
+          <HStack color="blue.700">
+            <Text>前往專案</Text>
+            <ChevronRightIcon w="18px" h="18ox" />
+          </HStack>
+        </Link>
       </VStack>
     </Flex>
   );
