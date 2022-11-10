@@ -108,7 +108,12 @@ const CrosspointContent = () => {
         <Span color="grey.800" fontWeight="300">
           我設計的範圍有
         </Span>
-        <Link fontWeight="400" variant="link02" as={Span} to="/crosspoint">
+        <Link
+          fontWeight="400"
+          variant="link02"
+          as={RouterLink}
+          to="/crosspoint"
+        >
           <Span mx="4px" borderBottom="2px solid" borderColor="blue.500">
             檢測服務
           </Span>
