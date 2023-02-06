@@ -23,13 +23,13 @@ const workList = [
   },
   {
     title: '台灣吧訂閱式集資官網 2017',
-    link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
+    link: 'https://www.behance.net/gallery/51615403/2017',
     image: taiwanbar,
     linear: 'linear-gradient(0deg, #654404 0%, rgba(182, 144, 9, 0) 100%)',
   },
   {
     title: '新加坡兒美官網 2017',
-    link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
+    link: 'https://dribbble.com/shots/4446605-UI-Design-for-English-School-Website',
     image: school,
     linear: 'linear-gradient(0deg, #002B46 0%, rgba(9, 80, 125, 0) 100%)',
   },
@@ -88,7 +88,7 @@ const FreelanceWork = () => {
     >
       <Container>
         <VStack w="100%" pb="20px" spacing="5px">
-          <Text textStyle="heading01">FreelanceWork</Text>
+          <Text textStyle="heading01">Freelance Work</Text>
           <Text textStyle="text03" textAlign="center" maxW="700px">
             2017 全職自由接案者約一年左右，
             <br />
