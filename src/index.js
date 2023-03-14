@@ -5,6 +5,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import { localEn, localZh } from './i18n';
+
+const defaultLanguage = localStorage.getItem('language');
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    resources: {
+      en: { translation: localEn },
+      'zh-TW': { translation: localZh },
+    },
+    lng: defaultLanguage || 'en',
+    fallbackLng: 'en',
+    interpolation: { escapeValue: false },
+  });
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);

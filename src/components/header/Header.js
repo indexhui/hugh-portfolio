@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {
   Flex,
   HStack,
-  VStack,
   Text,
   Image,
   Link,
@@ -13,6 +12,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Button,
   useDisclosure,
   useMediaQuery,
 } from '@chakra-ui/react';
@@ -24,11 +24,16 @@ import { motion } from 'framer-motion';
 import MobileMenu from './MobileMenu';
 
 import logo from 'assets/images/logo.svg';
+import i18n from 'i18next';
+import { useSearchParams } from 'react-router-dom';
+import LanguageSwitch from 'components/LanguageSwitch';
+import { useTranslation } from 'react-i18next';
 
 const MotionFlex = motion(Flex);
 
 const HoverDropMenu = ({ handleClick, isActive }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Menu
       isOpen={isOpen}
@@ -96,6 +101,15 @@ const Header = props => {
   const [isLargerThan980] = useMediaQuery('(min-width: 980px)');
   const location = useLocation();
   const navigate = useNavigate();
+  const currentLanguage = i18n.language;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { t } = useTranslation();
+
+  const handleChangeLanguage = lng => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+    setSearchParams({ local: 'zh-TW' });
+  };
 
   const handleDownload = useCallback(() => {
     const a = document.createElement('a');
@@ -105,14 +119,14 @@ const Header = props => {
     // eslint-disable-next-line
   }, []);
 
-  const handleScroll = () => {
-    const element = document.getElementById('works');
-    polyfill();
-    scrollIntoView(element, {
-      behavior: 'smooth',
-      inline: 'center',
-    });
-  };
+  // const handleScroll = () => {
+  //   const element = document.getElementById('works');
+  //   polyfill();
+  //   scrollIntoView(element, {
+  //     behavior: 'smooth',
+  //     inline: 'center',
+  //   });
+  // };
 
   const handleClick = () => {
     navigate('/works', { replace: true });
@@ -179,6 +193,7 @@ const Header = props => {
             </Text>
           </HStack>
         </RouterLink>
+
         {isLargerThan980 ? (
           <HStack spacing="20px">
             <HoverDropMenu
@@ -190,7 +205,7 @@ const Header = props => {
                 _hover={{ color: 'blue.600' }}
                 color={location.pathname === '/about' ? 'blue.700' : 'grey.700'}
               >
-                About
+                {t('about')}
               </Text>
             </RouterLink>
             <Link onClick={handleDownload} variant="link02">
@@ -199,6 +214,10 @@ const Header = props => {
                 <Icon as={FiDownload} w="14px" />
               </HStack>
             </Link>
+            <HStack onClick={() => handleChangeLanguage('zh')}>
+              {currentLanguage} 🇹🇼
+            </HStack>
+            <LanguageSwitch />
           </HStack>
         ) : (
           <MobileMenu handleDownload={handleDownload} />

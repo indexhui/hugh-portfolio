@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["crosspoint", "Feng", "Portaly", "Realengine"]
+  "cSpell.words": ["crosspoint", "Feng", "Portaly", "Realengine", "womany"],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

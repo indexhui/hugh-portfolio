@@ -4,11 +4,11 @@ import {
   VStack,
   SimpleGrid,
   Link,
-  Divider,
   AspectRatio,
 } from '@chakra-ui/react';
 
-import { Container, SkeletonImage } from 'components/layouts';
+import { Container } from 'components/layouts';
+import WorkCard from 'components/WorkCard';
 
 import z from 'assets/images/works/z.jpg';
 import samurai from 'assets/images/works/samurai.jpg';
@@ -35,44 +35,12 @@ const workList = [
   },
 ];
 
-const WorkCard = props => {
-  const { title, link, image, linear } = props;
-  return (
-    <AspectRatio as={Link} href={link} ratio={400 / 250} isExternal>
-      <Flex
-        shadow="md"
-        rounded="md"
-        bgImage={image}
-        bgPosition="center"
-        bgSize="
-      cover"
-        w="100%"
-        align="flex-end"
-      >
-        <Flex w="100%" h="100%" align="flex-end">
-          <Flex
-            backdropFilter="blur(2px)"
-            bgGradient={linear}
-            w="100%"
-            h="55%"
-            align="flex-end"
-            p="12px"
-          >
-            <Text color="white">{title}</Text>
-          </Flex>
-        </Flex>
-      </Flex>
-    </AspectRatio>
-  );
-};
-
 const FrontendWork = () => {
   return (
     <Flex
       py={{ base: '32px', lg: '48px' }}
       pb={{ base: '48px', lg: '72px' }}
       bgColor="white"
-      // bgImage="linear-gradient(#f0f0f0 1px, transparent 1px), linear-gradient(to right, #f0f0f0 1px, white 1px)"
       bgImage="radial-gradient(#bfbfbf 0.5px, transparent 0.5px), radial-gradient(#bfbfbf 0.5px, white 0.5px)"
       bgSize="20px 20px"
     >

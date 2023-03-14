@@ -22,7 +22,7 @@ const Wrapper = ({ children }) => {
 const Router = () => {
   const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence>
       <Wrapper>
         <Routes location={location} key={location.pathname}>
           {/* <Route path="/resource" element={<ResourcePage />}>

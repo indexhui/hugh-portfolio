@@ -1,14 +1,7 @@
-import {
-  Flex,
-  Text,
-  VStack,
-  SimpleGrid,
-  Link,
-  Divider,
-  AspectRatio,
-} from '@chakra-ui/react';
+import { Flex, Text, VStack, SimpleGrid } from '@chakra-ui/react';
 
-import { Container, SkeletonImage } from 'components/layouts';
+import { Container } from 'components/layouts';
+import WorkCard from 'components/WorkCard';
 
 import womany from 'assets/images/works/womany.jpg';
 import taiwanbar from 'assets/images/works/taiwanbar.jpg';
@@ -35,54 +28,11 @@ const workList = [
   },
 ];
 
-// background-color: #e5e5f7;
-// opacity: 0.8;
-// background-image:  linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
-// background-size: 20px 20px;
-
-const WorkCard = props => {
-  const { title, link, image, linear } = props;
-  return (
-    <AspectRatio as={Link} href={link} ratio={400 / 250} isExternal>
-      <Flex
-        shadow="md"
-        rounded="md"
-        bgImage={image}
-        bgPosition="center"
-        bgSize="
-      cover"
-        w="100%"
-        align="flex-end"
-      >
-        <Flex w="100%" h="100%" align="flex-end">
-          <Flex
-            backdropFilter="blur(2px)"
-            bgGradient={linear}
-            w="100%"
-            h="55%"
-            align="flex-end"
-            p="12px"
-          >
-            <Text color="white">{title}</Text>
-          </Flex>
-        </Flex>
-      </Flex>
-    </AspectRatio>
-  );
-};
-
-// background-color: #e5e5f7;
-// opacity: 0.8;
-// background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-// background-size: 20px 20px;
-// background-position: 0 0,10px 10px;
-
 const FreelanceWork = () => {
   return (
     <Flex
       pt={{ base: '32px', lg: '60px' }}
       bgColor="white"
-      // bgImage="linear-gradient(#f0f0f0 1px, transparent 1px), linear-gradient(to right, #f0f0f0 1px, white 1px)"
       bgImage="radial-gradient(#bfbfbf 0.5px, transparent 0.5px), radial-gradient(#bfbfbf 0.5px, white 0.5px)"
       bgSize="20px 20px"
     >

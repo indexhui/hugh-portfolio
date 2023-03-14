@@ -7,15 +7,7 @@ import '@fontsource/noto-sans-tc/500.css';
 import '@fontsource/noto-sans-tc/700.css';
 
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-} from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import Router from 'routes';
 import Header from 'components/header/Header';

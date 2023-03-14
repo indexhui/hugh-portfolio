@@ -9,6 +9,7 @@ import {
 import { motion } from 'framer-motion';
 
 import { Container, SkeletonImage } from 'components/layouts';
+import { useTranslation } from 'react-i18next';
 
 import avatar from 'assets/images/about/hugh_avatar.jpg';
 import hello from 'assets/images/about/hello.jpg';
@@ -80,30 +81,32 @@ const Decoration = () => {
   );
 };
 
-const RightHero = () => {
-  return (
-    <Flex
-      position="absolute"
-      right="0"
-      h="100%"
-      align="center"
-      justify="flex-end"
-      w="50%"
-    >
-      <Image
-        borderRadius="100px 0 0 100px"
-        w="100%"
-        h="400px"
-        src={hello}
-        alt="hello world"
-        objectFit="cover"
-      />
-    </Flex>
-  );
-};
+// const RightHero = () => {
+//   return (
+//     <Flex
+//       position="absolute"
+//       right="0"
+//       h="100%"
+//       align="center"
+//       justify="flex-end"
+//       w="50%"
+//     >
+//       <Image
+//         borderRadius="100px 0 0 100px"
+//         w="100%"
+//         h="400px"
+//         src={hello}
+//         alt="hello world"
+//         objectFit="cover"
+//       />
+//     </Flex>
+//   );
+// };
 
 const SelfIntroduction = () => {
   const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
+  const { t } = useTranslation();
+
   return (
     <Flex w="100%" position="relative" bgColor="grey.400" overflow="hidden">
       {isLargerThan1280 && <Decoration />}
@@ -136,7 +139,8 @@ const SelfIntroduction = () => {
                 bottom="-18px"
               />
               <Text fontSize="20px" fontWeight="500" color="grey.800">
-                透過觀察提供人們所需幫助 <br /> 是我做為設計師的熱情所在
+                {t('aboutSlogan01')}
+                {t('aboutSlogan02')}
               </Text>
             </Flex>
             <VStack
@@ -146,18 +150,10 @@ const SelfIntroduction = () => {
               textStyle="text03"
               color="grey.800"
             >
-              <Text>大家好，我是 Hugh，一位擅長前端、UI/UX 的產品設計師。</Text>
-              <Text>
-                我目前是 Freelance 前端工程師 / 產品設計師。我過去經歷包括在
-                zinstitute 擔任前端工程師，在 Crosspoint AI
-                擔任產品設計師，在日本寶可夢擔任卡牌平面設計師。我擁有工藝設計學士學位。
-              </Text>
-              <Text>
-                我相信設計發揮的力量有助於人與產品之間創造流暢的互動和愉快的體驗。也相信以商業策略進行思考有助設計落地並將概念化為現實。我享受作為設計師讓我有機會為人類進程做出貢獻的過程和成就感。它是我作為設計師的原動力。
-              </Text>
-              <Text>
-                除了設計也喜歡接觸各領域的專業，包含學習前端並運用在工作與生活上。
-              </Text>
+              <Text>{t('aboutIntro01')}</Text>
+              <Text>{t('aboutIntro02')}</Text>
+              <Text>{t('aboutIntro03')}</Text>
+              <Text>{t('aboutIntro04')}</Text>
             </VStack>
           </Flex>
           <Flex w={{ base: '100%', md: '35%' }} justify="center">
