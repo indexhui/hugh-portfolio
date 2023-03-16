@@ -8,6 +8,7 @@ import {
   Grid,
   GridItem,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { SkeletonImage } from 'components/layouts';
 
@@ -28,6 +29,7 @@ const Tag = props => {
 
 const ExperienceCard = props => {
   const { image, title, company, time, isDesign, content, tag } = props;
+  const { t } = useTranslation();
   return (
     <Flex
       w="100%"
@@ -52,9 +54,9 @@ const ExperienceCard = props => {
           />
           <VStack align="flex-start" spacing="5px">
             <Text fontWeight="600" color="grey.650">
-              {company}
+              {t(company)}
             </Text>
-            <Text color="grey.800">{title}</Text>
+            <Text color="grey.800">{t(title)}</Text>
           </VStack>
         </HStack>
         <VStack align={{ base: 'flex-start', lg: 'flex-end' }}>

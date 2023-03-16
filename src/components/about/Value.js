@@ -2,6 +2,8 @@ import { Flex, Box, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Container } from 'components/layouts';
 
+import { useTranslation } from 'react-i18next';
+
 import SectionTitle from 'components/SectionTitle';
 
 const valueList = [
@@ -105,6 +107,7 @@ const ValueCard = props => {
 };
 
 const Value = () => {
+  const { t } = useTranslation();
   return (
     <Flex bgColor="blue.700">
       <Container py={{ base: '40px', md: '60px' }}>
@@ -122,8 +125,12 @@ const Value = () => {
             align="flex-start"
             spacing={{ base: '20px', lg: '40px' }}
           >
-            {valueList.map(item => (
-              <ValueCard key={item.title} {...item} />
+            {valueList.map((item, index) => (
+              <ValueCard
+                key={index}
+                title={t(`valueTitle0${index + 1}`)}
+                content={t(`value0${index + 1}`)}
+              />
             ))}
           </VStack>
         </Flex>

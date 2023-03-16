@@ -61,7 +61,7 @@ const Footer = () => {
         </HStack>
       </Flex>
       <Text fontSize="12px" color="whiteAlpha.700" pt="20px">
-        謝謝你觀看到最後 = ) | 2022 © Hugh Feng All right reserved
+        謝謝你觀看到最後 = ) | 2023 © Hugh Feng All right reserved
       </Text>
     </Container>
   );

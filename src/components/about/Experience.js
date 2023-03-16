@@ -2,21 +2,20 @@ import {
   Flex,
   Text,
   VStack,
-  HStack,
   Grid,
   GridItem,
   Link,
   chakra,
   Box,
-  Icon,
+  UnorderedList,
+  ListItem,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { Link as RouterLink } from 'react-router-dom';
 
 import { Container, Span } from 'components/layouts';
 import ExperienceCard from './ExperienceCard';
-
-import { BsDot } from 'react-icons/bs';
 
 import institute from 'assets/images/about/institute.jpg';
 import real from 'assets/images/about/real.jpg';
@@ -24,44 +23,49 @@ import crosspoint from 'assets/images/about/crosspoint.jpg';
 import sov from 'assets/images/about/sov.jpg';
 
 const InstituteContent = () => {
+  const { t } = useTranslation();
   return (
     <VStack align="flex-start" w="100%" pt="12px" spacing="0px">
-      <Box textStyle="text02">
-        <Span>・製作</Span>
-        <Link
-          fontWeight="400"
-          variant="link02"
-          textStyle="text02"
-          href="https://zinstitute.net/zh"
-          isExternal
-        >
-          <chakra.span
-            as="span"
-            mx="4px"
-            borderBottom="2px solid"
-            borderColor="blue.500"
+      <UnorderedList>
+        <ListItem textStyle="text02">
+          <Span>{t('ex01Content01_1')}</Span>
+          <Link
+            fontWeight="400"
+            variant="link02"
+            textStyle="text02"
+            href="https://zinstitute.net/zh"
+            isExternal
           >
-            互動式特效官網
-          </chakra.span>
-        </Link>
-        <Span>，串接表單、訂閱信等功能。</Span>
-      </Box>
-      <Box textStyle="text02">
-        <Span>・建構 CSV 內容管理流程，讓課程部門可以定時輪替內容</Span>
-      </Box>
-      <Box textStyle="text02">
-        <Span>・運用 Clarity 網站熱點圖分析工具優化資訊安排。</Span>
-      </Box>
-      <Box textStyle="text02">
-        <Span>・開發 React 前端工程師 Web 3 開發實戰班課程教材模板。</Span>
-      </Box>
+            <chakra.span
+              as="span"
+              mx="4px"
+              borderBottom="2px solid"
+              borderColor="blue.500"
+            >
+              {t('ex01Content01_2')}
+            </chakra.span>
+          </Link>
+          <Span> {t('ex01Content01_3')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Span>{t('ex01Content02')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Span>{t('ex01Content03')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Span>{t('ex01Content04')}</Span>
+        </ListItem>
+      </UnorderedList>
     </VStack>
   );
 };
 
 const RealContent = () => {
+  const { t } = useTranslation();
   return (
-    <VStack
+    <Flex
+      direction="column"
       align="flex-start"
       w="100%"
       pt="12px"
@@ -69,31 +73,41 @@ const RealContent = () => {
       textStyle="text02"
     >
       <Text color="grey.800" fontWeight="300">
-        以顧問合作關係擔任產品設計師，前後協助規劃與設計了兩款產品的MVP。
-        綜合使用者體驗和市場規劃產品策略，定義核心設計元件庫系統與操作模式。
+        {t('ex02Content01')}
       </Text>
-      <Link
-        fontWeight="400"
-        variant="link02"
-        as={RouterLink}
-        to="/realengine"
-        borderBottom="2px solid"
-        borderColor="blue.500"
-      >
-        Real Engine 真實引擎 : IP創作者桌遊平台
-      </Link>
-      <Link fontWeight="400" variant="link02" as={RouterLink} to="/portaly">
-        <chakra.span as="span" borderBottom="2px solid" borderColor="blue.500">
-          Portaly 傳送門 : Link-in-Bio 輕型個人網站工具
-        </chakra.span>
-      </Link>
-    </VStack>
+      <UnorderedList>
+        <ListItem textStyle="text02">
+          <Link
+            fontWeight="400"
+            variant="link02"
+            as={RouterLink}
+            to="/realengine"
+            // borderBottom="2px solid"
+            // borderColor="blue.500"
+            color="blue.700"
+          >
+            {t('ex02Content02_1')}
+          </Link>
+          <Span> &nbsp; {t('ex02Content02_2')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Link fontWeight="400" variant="link02" as={RouterLink} to="/portaly">
+            <chakra.span as="span" color="blue.700">
+              {t('ex02Content03_1')}
+            </chakra.span>
+          </Link>
+          <Span> &nbsp; {t('ex02Content03_2')}</Span>
+        </ListItem>
+      </UnorderedList>
+    </Flex>
   );
 };
 
 const CrosspointContent = () => {
+  const { t } = useTranslation();
   return (
-    <VStack
+    <Flex
+      direction="column"
       align="flex-start"
       w="100%"
       pt="12px"
@@ -101,32 +115,28 @@ const CrosspointContent = () => {
       textStyle="text02"
     >
       <Text color="grey.800" fontWeight="300">
-        團隊首位設計師，建立從需求探索到工程與設計的協作流程。定義了品牌識別以及設計系統分別用於檢測系統與
-        SaaS 工具服務。負責增加場館對於檢測體驗的價值需求。
+        {t('ex03Content03_1')}
       </Text>
-      <Box color="grey.800" fontWeight="300" spacing="0">
-        <Span color="grey.800" fontWeight="300">
-          我設計的範圍有
-        </Span>
-        <Link
-          fontWeight="400"
-          variant="link02"
-          as={RouterLink}
-          to="/crosspoint"
-        >
-          <Span mx="4px" borderBottom="2px solid" borderColor="blue.500">
-            檢測服務
-          </Span>
-        </Link>
-        <Span color="grey.800" fontWeight="300">
-          、問卷系統、CRM、Ｃ端用戶報告與小程序。
-        </Span>
-      </Box>
-    </VStack>
+      <UnorderedList>
+        <ListItem textStyle="text02">
+          <Text textStyle="text02">{t('ex03Content03_2')}</Text>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Text textStyle="text02">{t('ex03Content03_3')}</Text>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Text textStyle="text02">{t('ex03Content03_4')}</Text>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Text textStyle="text02">{t('ex03Content03_5')}</Text>
+        </ListItem>
+      </UnorderedList>
+    </Flex>
   );
 };
 
 const SovContent = () => {
+  const { t } = useTranslation();
   return (
     <VStack
       align="flex-start"
@@ -143,9 +153,9 @@ const SovContent = () => {
         lineHeight="1.75"
       >
         <chakra.span color="grey.800" fontWeight="300">
-          導入使用者體驗中心來改善系統操作，建立起
+          {t('ex03Content03_1')}
         </chakra.span>
-        <Link
+        {/* <Link
           display="inline"
           variant="link02"
           href="https://www.behance.net/gallery/71249629/SOV-website-UXUI-Design"
@@ -163,7 +173,7 @@ const SovContent = () => {
         </Link>
         <chakra.span color="grey.800" fontWeight="300">
           和規劃CRM系統，特別是規劃牙醫診所、牙技師、業務、病患溝通整合工具。
-        </chakra.span>
+        </chakra.span> */}
       </Box>
     </VStack>
   );
@@ -172,8 +182,8 @@ const SovContent = () => {
 const experienceList = [
   {
     image: institute,
-    company: 'The Z Institute 區塊鏈線上學院',
-    title: '前端工程師',
+    company: 'ex01Company',
+    title: 'ex01Title',
     time: 'Feb 2022 - May 2022 · 4 mos',
     isDesign: false,
     tag: ['React'],
@@ -181,8 +191,8 @@ const experienceList = [
   },
   {
     image: real,
-    company: 'Real Engine 真實引擎',
-    title: '產品設計師(顧問)',
+    company: 'ex02Company',
+    title: 'ex02Title',
     time: 'Nov 2020 - Jan 2021 · 3 mos',
     isDesign: true,
     tag: ['creator', 'freelance'],
@@ -190,8 +200,8 @@ const experienceList = [
   },
   {
     image: crosspoint,
-    company: 'Crosspoint  AI 檢測',
-    title: '產品設計師',
+    company: 'ex03Company',
+    title: 'ex03Title',
     time: 'Feb 2019 - Aug 2021 · 2 ys 7 mos',
     isDesign: true,
     tag: ['AI', 'sport', 'health'],
@@ -199,8 +209,8 @@ const experienceList = [
   },
   {
     image: sov,
-    company: 'SOV 舒服美',
-    title: 'UIUX 設計師',
+    company: 'ex04Company',
+    title: 'ex04Title',
     time: 'Feb 2018  - Feb 2019 · 1 ys',
     isDesign: true,
     tag: ['health'],

@@ -12,7 +12,6 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Button,
   useDisclosure,
   useMediaQuery,
 } from '@chakra-ui/react';
@@ -76,19 +75,19 @@ const HoverDropMenu = ({ handleClick, isActive }) => {
         </MenuItem>
         <MenuItem
           as={RouterLink}
-          to="/realengine"
-          _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
-          onClick={onClose}
-        >
-          Real Engine
-        </MenuItem>
-        <MenuItem
-          as={RouterLink}
           to="/portaly"
           _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
           onClick={onClose}
         >
           Portaly傳送門
+        </MenuItem>
+        <MenuItem
+          as={RouterLink}
+          to="/realengine"
+          _hover={{ bgColor: 'whiteAlpha.900', color: 'blue.800' }}
+          onClick={onClose}
+        >
+          Real Engine
         </MenuItem>
       </MenuList>
     </Menu>
