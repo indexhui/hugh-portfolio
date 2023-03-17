@@ -65,6 +65,35 @@ const aboutPage = {
   currentProject03Content: `"PickUp design" is a Line community of thousands of designers, and I am currently responsible for planning the community's learning database.`,
 };
 
+const workPage = {
+  project: 'Case Study',
+  freelanceIntro: `2017 Full-time freelancer for about a year,
+Collaborated with partners and companies such as Women's Way, Taiwan Bar, UX designer Jenny Shen.`,
+  freelanceWork01: 'Womany EC 2017',
+  freelanceWork02: 'Taiwan Bar 2017',
+  freelanceWork03: `Singapore Children's English Learning Center`,
+  frontendIntro:
+    'I worked as a frontend engineer at The Z Institute in the first half of 2022, and in the second half, I worked as a freelancer on various frontend projects.',
+  frontendWork01: 'The Z Institute',
+  frontendWork02: 'Japanese Culture Map',
+  frontendWork03: '2022 Mining Art Festival',
+  projectAction: 'see detail',
+  project01Title: 'Crosspoint AI body analysis',
+  project01Subtitle: 'Revamp of the sports testing system and product planning',
+  project01Content:
+    'Crosspoint captures body motion changes through cameras and uses AI image analysis to provide fitness and rehabilitation fields. By utilizing an AI posture assessment detection system, it understands the differences in body balance and muscle tension during exercise. This allows coaches to provide member recommendations through information visualization images.',
+  project02Title: 'Link-in-Bio tool MVP',
+  project02Subtitle: 'Portaly',
+  project02Tag: 'Creator tools,Web app',
+  project02Content: `Provide creators with a low-cost and user-friendly personal page building tool, which amplifies the visual appeal of their content and increases opportunities for clicks and interaction. Through the 'Portaly Gateway,' audiences can reach their favorite creators and expand the influence of their work.`,
+  project03Title: 'Real Engine',
+  project03Subtitle: 'IP Creator Board Game Crowdfunding Platform 0-1',
+  project03Tag: 'UI/UX Design, Web app',
+  project03Content:
+    'Designed a crowdfunding platform for tabletop games exclusively for IP creators from scratch, and as a result, have defined three design strategies that focus on the advantages of IP creators.',
+};
+
 export const localEn = {
   ...aboutPage,
+  ...workPage,
 };

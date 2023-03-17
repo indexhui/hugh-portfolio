@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Flex, Text, VStack, SimpleGrid } from '@chakra-ui/react';
 
 import { Container } from 'components/layouts';
@@ -9,19 +10,19 @@ import school from 'assets/images/works/school.jpg';
 
 const workList = [
   {
-    title: '女人迷 EC 電商 2017',
+    title: 'freelanceWork01',
     link: 'https://www.behance.net/gallery/64428637/-womany-EC-showcase',
     image: womany,
     linear: 'linear-gradient(0deg, #615A7E 0%, rgba(105, 80, 176, 0) 100%)',
   },
   {
-    title: '台灣吧訂閱式集資官網 2017',
+    title: 'freelanceWork02',
     link: 'https://www.behance.net/gallery/51615403/2017',
     image: taiwanbar,
     linear: 'linear-gradient(0deg, #654404 0%, rgba(182, 144, 9, 0) 100%)',
   },
   {
-    title: '新加坡兒美官網 2017',
+    title: 'freelanceWork03',
     link: 'https://dribbble.com/shots/4446605-UI-Design-for-English-School-Website',
     image: school,
     linear: 'linear-gradient(0deg, #002B46 0%, rgba(9, 80, 125, 0) 100%)',
@@ -29,6 +30,8 @@ const workList = [
 ];
 
 const FreelanceWork = () => {
+  const { t } = useTranslation();
+
   return (
     <Flex
       pt={{ base: '32px', lg: '60px' }}
@@ -40,9 +43,10 @@ const FreelanceWork = () => {
         <VStack w="100%" pb="20px" spacing="5px">
           <Text textStyle="heading01">Freelance Work</Text>
           <Text textStyle="text03" textAlign="center" maxW="700px">
-            2017 全職自由接案者約一年左右，
+            {t('freelanceIntro')}
+            {/* 2017 全職自由接案者約一年左右，
             <br />
-            合作過的對象和公司有女人迷、台灣吧、UX設計師 Jenny Shen
+            合作過的對象和公司有女人迷、台灣吧、UX設計師 Jenny Shen */}
           </Text>
         </VStack>
         <SimpleGrid

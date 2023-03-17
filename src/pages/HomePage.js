@@ -3,7 +3,6 @@ import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Flex } from '@chakra-ui/react';
-import Hero from 'components/home/Hero';
 import SelfIntroduction from 'components/about/SelfIntroduction';
 import DesignProjectList from 'components/home/DesignProjectList';
 import FreelanceWork from 'components/FreelanceWork';

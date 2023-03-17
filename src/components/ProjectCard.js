@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   Flex,
   Text,
@@ -16,6 +18,8 @@ const MotionImage = motion(Image);
 
 const ProjectCard = props => {
   const { isNeedPassword } = props;
+  const { t } = useTranslation();
+
   const variants = {
     visible: {
       opacity: 1,
@@ -55,17 +59,17 @@ const ProjectCard = props => {
         spacing={{ base: '4px', lg: '12px' }}
       >
         <VStack spacing={{ base: '0px', lg: '0px' }} align="flex-start">
-          <Text textStyle="title1">{props.subTitle}</Text>
-          <Text textStyle="text03">{props.title}</Text>
+          <Text textStyle="title1">{t(props.subTitle)}</Text>
+          <Text textStyle="text03">{t(props.title)}</Text>
         </VStack>
         <Text textStyle="text04" color="blue.700">
           {props.tag}
         </Text>
-        <Text textStyle="text04">{props.content}</Text>
+        <Text textStyle="text04">{t(props.content)}</Text>
         <Text>{isNeedPassword ? '需要密碼' : ''}</Text>
         <Link as={RouterLink} to={props.link}>
           <HStack color="blue.700">
-            <Text>前往專案</Text>
+            <Text>{t('projectAction')}</Text>
             <ChevronRightIcon w="18px" h="18ox" />
           </HStack>
         </Link>

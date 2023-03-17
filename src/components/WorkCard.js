@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Flex, Text, Link, AspectRatio, Icon } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { BiLinkExternal } from 'react-icons/bi';
@@ -6,6 +8,8 @@ const MotionFlex = motion(Flex);
 
 const WorkCard = props => {
   const { title, link, image, linear } = props;
+  const { t } = useTranslation();
+
   return (
     <AspectRatio as={Link} href={link} ratio={400 / 250} isExternal>
       <MotionFlex
@@ -29,7 +33,7 @@ const WorkCard = props => {
             p="12px"
           >
             <Flex w="100%" align="center" justify="space-between">
-              <Text color="white">{title}</Text>
+              <Text color="white">{t(title)}</Text>
               <Icon color="white" as={BiLinkExternal} />
             </Flex>
           </Flex>

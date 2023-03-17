@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   Flex,
   Text,
@@ -16,19 +18,19 @@ import gold from 'assets/images/works/gold.jpg';
 
 const workList = [
   {
-    title: '互動特效官網',
+    title: 'frontendWork01',
     link: 'https://zinstitute.net/zh',
     image: z,
     linear: 'linear-gradient(0deg, #01FEA050 0%, rgba(105, 80, 176, 0) 100%)',
   },
   {
-    title: '日式文化地圖',
+    title: 'frontendWork02',
     link: 'https://yamato.katanansamurai.art/',
     image: samurai,
     linear: 'linear-gradient(0deg, #654404 0%, rgba(182, 144, 9, 0) 100%)',
   },
   {
-    title: '2022礦山藝術季',
+    title: 'frontendWork03',
     link: 'https://www.mineartfestival.com/',
     image: gold,
     linear: 'linear-gradient(0deg, #002B46 0%, rgba(9, 80, 125, 0) 100%)',
@@ -36,6 +38,8 @@ const workList = [
 ];
 
 const FrontendWork = () => {
+  const { t } = useTranslation();
+
   return (
     <Flex
       py={{ base: '32px', lg: '48px' }}
@@ -48,8 +52,7 @@ const FrontendWork = () => {
         <VStack w="100%" pb="20px" spacing="5px">
           <Text textStyle="heading01">Front-end Works</Text>
           <Text textStyle="text03" textAlign="center" maxW="700px">
-            在2022 上半年以前端工程師身分任職於 The Z Institute。並下半年以
-            freelance 身分接觸各類前端專案
+            {t('frontendIntro')}
           </Text>
         </VStack>
         <SimpleGrid

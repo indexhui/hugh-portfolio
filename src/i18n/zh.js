@@ -56,6 +56,37 @@ const aboutPage = {
   currentProject03Content:
     'PPickUp design 為千人的設計師 Line 社群，目前負責社群學習資料庫的規劃。',
 };
+
+const workPage = {
+  project: '設計案例',
+  freelanceIntro: `2017 全職自由接案者約一年左右，
+合作過的對象和公司有女人迷、台灣吧、UX設計師 Jenny Shen。`,
+  freelanceWork01: '女人迷 EC 電商 2017',
+  freelanceWork02: '女人迷 EC 電商 2017',
+  freelanceWork03: '新加坡兒美官網 2017',
+  frontendIntro:
+    '在2022 上半年以前端工程師身分任職於 The Z Institute。並下半年以 freelance 身分接觸各類前端專案。',
+  frontendWork01: 'The Z Institute 互動特效官網',
+  frontendWork02: '日式文化地圖',
+  frontendWork03: '2022 礦山藝術季',
+  projectAction: '前往專案',
+  project01Title: 'Crosspoint AI 體態分析',
+  project01Subtitle: '運動檢測系統改版以及產品規劃',
+  project01Content:
+    'Crosspoint 透過攝影機捕捉人體動態變化搭配 AI 影像分析， 提供健身與復健場域，利用 AI 姿勢評估檢測系統，去了解運動時身體平衡差異與肌肉緊繃概況，讓教練以資訊視覺化圖像來提供會員建議。',
+  project02Title: 'Link-in-Bio 輕型個人網站 MVP',
+  project02Subtitle: 'Portaly 傳送門',
+  project02Tag: '創作者工具, Web app',
+  project02Content:
+    '提供創作者們，一個較低成本、好上手的個人頁面建立工具，放大圖文的吸引力、藉此增加點擊與互動的機會，讓受眾得以透過「傳送門 Portaly」觸及他們喜愛的創作者，擴散創作的影響力。',
+  project03Title: 'Real Engine 真實引擎',
+  project03Subtitle: 'IP 創作者桌遊募資平台 0-1',
+  project03Tag: '創作者工具, Web app',
+  project03Content:
+    '從頭規劃專屬於 IP 創作者的桌遊募資平台，因而定義了三項圍繞 IP 創作者優勢的設計策略',
+};
+
 export const localZh = {
   ...aboutPage,
+  ...workPage,
 };
