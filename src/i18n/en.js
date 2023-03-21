@@ -3,7 +3,7 @@ const aboutPage = {
   aboutSlogan01: 'Providing people with the help they need through observation',
   aboutSlogan02: 'is where my passion as a designer lies.',
   aboutIntro01:
-    'Hello everyone, I am Hugh, a designer who enjoys thinking from different perspectives.',
+    'Hello everyone, I am Hugh, a Product manager with development and design experience.',
   aboutIntro02: `Five years of product design and over a year of front-end development experience. Through assuming different roles, I have explored and summarized different possibilities for team collaboration and design trends."`,
   aboutIntro03:
     'I am committed to creating smooth interactions and enjoyable experiences between people and products. At the same time, I strongly believe that holistic strategic thinking is helpful in making designs practical and turning concepts into reality. I enjoy the process and sense of accomplishment that comes with being a designer and having the opportunity to contribute to human progress.',
@@ -93,7 +93,59 @@ Collaborated with partners and companies such as Women's Way, Taiwan Bar, UX des
     'Designed a crowdfunding platform for tabletop games exclusively for IP creators from scratch, and as a result, have defined three design strategies that focus on the advantages of IP creators.',
 };
 
+const work = {
+  durationEmployment: 'Duration of Employment',
+  myRole: 'My Role',
+  pd: 'Product designer',
+  team: 'Team',
+  workScope: 'Work scope',
+};
+
+const crosspoint = {
+  cpTitle_1: 'Crosspoint AI',
+  cpTitle_2: 'sports risk detection',
+  cpSubtitle: 'Sports Evaluation System',
+  cpDuration: '2 yrs 3 mos / Feb. 2019 - April 2021',
+  cpWorkScope:
+    'Identity design, functional planning, user research, design finalization, engineering delivery.',
+  cpOverview_1:
+    'By using cameras to capture human body movements and combining them with AI image analysis, this system provides services for fitness and rehabilitation. By utilizing an AI posture assessment and detection system, it helps to understand differences in body balance and muscle tension during exercise, allowing coaches to provide members with recommendations through visualized information.',
+  cpOverview_2: `As the first designer on the team, besides designing operational needs, it is also important to understand the team's characteristics in order to cultivate a trusting and cooperative relationship between the team and the designer. At the same time, it is necessary to strengthen understanding and observation of the sports industry in order to bring out the value of design.`,
+  cpOutcome_1:
+    '+ Designing brand identity that can be applied to product visual design, promotional materials, and future physical exhibitions.',
+  cpOutcome_2:
+    '+Optimizing the inspection service and increasing the monthly inspection report to over 5000+.',
+  cpOutcome_3:
+    '+ Continuously addressing B2B (business-to-business) needs, clients include 15 chain fitness centers and rehabilitation centers such as Li-Shin Hospital, Forest Running Station, and RIZAP',
+  cpOutcome_4:
+    '+ Assisted Dream Fitness in increasing its opening membership count to 250,000.',
+  cpBg: `The first generation product was developed in collaboration with physical therapists from Shanghai Rehabilitation Center by the team, allowing in-house physical therapists to conduct tests for members. In 2019, the government promoted the sports industry, and the fitness industry in Taiwan began to flourish. The team seized the opportunity for rapid growth. As the product was optimized and new features were developed, the founder looked for a product designer to join the team. I was seeking a startup environment that could quickly sprint forward, and I joined Crosspoint through a friend's recommendation.`,
+  cpTask: `As the first designer on the team, after understanding the team's characteristics and becoming familiar with the sports industry, I developed four stages of tasks, with the first priority being the redesign of the brand identity and testing service. Next, I planned for the development of SaaS membership/coach management and research for future new feature releases.`,
+  cpTaskMemo:
+    'The main focus of this article is to introduce the process of redesigning the detection system.',
+  cpTaskList_01Title: 'Detection system',
+  cpTaskList_02Title: 'Brand identity',
+  cpTaskList_03Title: 'SaaS',
+  cpTaskList_04Title: 'Iteration ',
+  cpTaskList_01Content:
+    'MVP was originally built for a specific venue and had many usability issues and confusing information architecture. It requires a redesign of the product interface, documentation, and other marketing materials.',
+  cpTaskList_02Content:
+    'Planning the use of brand identity in various business areas: product interfaces, brochures, etc.',
+  cpTaskList_03Content:
+    'The reports were originally only available locally, but to provide an online service for venues to manage the business relationship between coaches and members. The service has been extended to include questionnaires, industry statistics and tracking of member performance data.',
+  cpTaskList_04Content:
+    'User feedback, service scenarios, expert interviews and strategic partnerships are used as the basis for product iteration. Based on the testing service, different oriented features are added: jumping action, InBody API stringing, member questionnaires, data analysis, etc.',
+  cpRedesignIntro:
+    'The testing system MVP was originally built as a service for specific rehabilitation facilities, even though rehabilitation practitioners familiar with the operation of the product had many ease of use issues and a confusing information structure that needed to be re-engineered',
+  cpRedesignBefore: 'MVP',
+  cpRedesignAfter: 'Redesign',
+  cpStaticDetection: '靜態檢測',
+  cpAnalysisReport: '分析報告',
+};
+
 export const localEn = {
   ...aboutPage,
   ...workPage,
+  ...crosspoint,
+  ...work,
 };

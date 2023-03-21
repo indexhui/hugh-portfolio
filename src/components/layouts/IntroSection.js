@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Flex, Text, VStack, Heading, chakra } from '@chakra-ui/react';
 import BannerSwiper from 'components/BannerSwiper';
 
 const IntroSection = props => {
   const { title, subTitle, bannerList, introduction } = props;
+  const { t } = useTranslation();
+
   return (
     <Flex
       wrap="wrap"
@@ -14,12 +17,12 @@ const IntroSection = props => {
       <VStack pb="24px" spacing="12px">
         <Heading variant="banner" textAlign="center">
           <chakra.span fontFamily="'Montserrat'">
-            {title?.en || 'English title'}
+            {t(title?.en) || 'English title'}
           </chakra.span>
-          {title?.zh || '中文標題'}
+          {t(title?.zh) || '中文標題'}
         </Heading>
         <Text color="gray.200" textAlign="center" fontWeight="300">
-          {subTitle || '產品類型介紹'}
+          {t(subTitle) || '產品類型介紹'}
         </Text>
       </VStack>
       <Flex wrap="wrap" w="100%" align="center">
@@ -37,8 +40,8 @@ const IntroSection = props => {
             {introduction &&
               introduction?.map((item, index) => (
                 <VStack key={item.title} spacing="2px" align="flex-start">
-                  <Text variant="bannerTitle">{item.title}</Text>
-                  <Text variant="bannerText">{item.content}</Text>
+                  <Text variant="bannerTitle">{t(item.title)}</Text>
+                  <Text variant="bannerText">{t(item.content)}</Text>
                 </VStack>
               ))}
           </VStack>

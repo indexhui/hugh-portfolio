@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 import { Flex, Text, VStack, Box } from '@chakra-ui/react';
 
 const OverviewSection = props => {
   const { content, projectOutcomes } = props;
+  const { t } = useTranslation();
+
   return (
     <Flex
       bg="grey.300"
@@ -25,7 +29,7 @@ const OverviewSection = props => {
         <VStack spacing="12px" maxW="1080px">
           {content.map((item, index) => (
             <Text variant="body" key={index} fontSize="20px" lineHeight="1.8">
-              {item}
+              {t(item)}
             </Text>
           ))}
         </VStack>
@@ -38,7 +42,7 @@ const OverviewSection = props => {
               {projectOutcomes &&
                 projectOutcomes.map((item, index) => (
                   <Text variant="body" key={index + 'projectOutcomes'}>
-                    {item}
+                    {t(item)}
                   </Text>
                 ))}
             </VStack>

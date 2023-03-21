@@ -2,7 +2,8 @@ const aboutPage = {
   about: '關於我',
   aboutSlogan01: '透過觀察提供人們所需幫助',
   aboutSlogan02: '是我做為設計師的熱情所在',
-  aboutIntro01: '大家好，我是 Hugh 一名喜歡進行換位思考的設計師。',
+  aboutIntro01:
+    '大家好，我是 Hugh 一名喜歡換位思考具備產品設計與開發經驗的產品經理。',
   aboutIntro02:
     '經歷有五年產品設計師與一年前端工程師的經驗，藉由擔任過不同角色的經驗，去探索與總結出團隊協作、設計趨勢的不同可能。',
   aboutIntro03:
@@ -86,7 +87,53 @@ const workPage = {
     '從頭規劃專屬於 IP 創作者的桌遊募資平台，因而定義了三項圍繞 IP 創作者優勢的設計策略',
 };
 
+const work = {
+  durationEmployment: '任職時間',
+  myRole: '我的角色',
+  pd: '產品設計師',
+  team: '團隊組成',
+  workScope: '工作範疇',
+};
+
+const crosspoint = {
+  cpTitle_1: 'Crosspoint AI',
+  cpTitle_2: '運動風險檢測',
+  cpSubtitle: '運動檢測系統',
+  cpDuration: '兩年三個月 / Feb. 2019 - April 2021',
+  cpWorkScope: '識別設計、功能規劃、使用者研究、設計完稿、工程交付',
+  cpOverview_1:
+    'Crosspoint 透過攝影機捕捉人體動態變化搭配 AI 影像分析， 提供健身與復健場域，利用 AI 姿勢評估檢測系統，去了解運動時身體平衡差異與肌肉緊繃概況，讓教練以資訊視覺化圖像來提供會員建議。',
+  cpOverview_2:
+    '團隊首位設計師，除了設計庶務需求外，更需要了解團隊特性來培養團隊與設計師的信任合作關係，也同時需要加強運動產業的了解與觀察從中發揮設計價值。',
+  cpOutcome_1: '+ 設計品牌識別，衍生應用於產品視覺、文宣品與日後的實體展出',
+  cpOutcome_2: '+ 優化檢測服務，每月檢測報告提升至 5000 +',
+  cpOutcome_3:
+    '+ 持續解決 B 端需求，客戶涵蓋聯新醫院、森林跑站、RIZAP 等 15 家連鎖健身房與康復中心',
+  cpOutcome_4: '+ 協助 Dream Fitness 提升開幕會員數 : 25萬',
+  cpBg: '初代產品是由團隊與上海康復中心物理治療師開發合作，讓院內物理治療師為會員進行檢測。2019年政府對運動產業推動與台灣健身產業日漸盛行，團隊迎來快速成長的機會。隨著產品優化的和新功能開發壓力下，創辦人尋找產品設計師加入。而我正尋找能快速衝刺的新創環境，在朋友的引薦下加入Crosspoint。',
+  cpTaskMemo: '本篇主軸介紹檢測系統 Redesign 的過程。',
+  cpTaskList_01Title: '檢測系統',
+  cpTaskList_02Title: '品牌識別',
+  cpTaskList_03Title: 'SaaS',
+  cpTaskList_04Title: '功能迭代',
+  cpTaskList_01Content:
+    '產品 MVP 最初是建立在特定場館的服務，存在許多易用性問題與資訊架構混亂需重新規劃: 產品介面、文宣手冊等',
+  cpTaskList_02Content: '規劃品牌識別運用在各項業務上: 產品介面、文宣手冊等',
+  cpTaskList_03Content:
+    '報告原僅存於本機上，為提供廠館線上服務，讓場館可以管理教練與會員之間的業務關係。並延伸出更多的服務: 問卷、產業數據統計、會員運動成效數據追蹤。',
+  cpTaskList_04Content:
+    '透過用戶回饋、服務場景觀察、專家訪談、戰略合作夥伴做為產品迭代依據。基於檢測服務上增加了不同面向的功能: 跳躍動作、InBody API 串接、會員問卷、數據分析等',
+  cpRedesignIntro:
+    '檢測系統 MVP最初是建立在特定康復產館的服務，即便熟悉產品操作的復健師存在許多易用性問題與資訊架構混亂需重新規劃',
+  cpRedesignBefore: 'MVP 改版前',
+  cpRedesignAfter: 'Redesign',
+  cpStaticDetection: '靜態檢測',
+  cpAnalysisReport: '分析報告',
+};
+
 export const localZh = {
   ...aboutPage,
   ...workPage,
+  ...crosspoint,
+  ...work,
 };
