@@ -50,7 +50,7 @@ const Background = () => {
       <VStack w="100%" py="30px" align="flex-start">
         <Text textStyle="title0">Task</Text>
         <Text textStyle="text01">{t('cpTask')}</Text>
-        <Text>{t('cpTask')}</Text>
+        <Text>{t('cpTaskMemo')}</Text>
         <SimpleGrid
           pt="10px"
           columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
