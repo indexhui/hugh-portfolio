@@ -42,8 +42,6 @@ const LanguageSwitch = () => {
     params.push([key, value]);
   });
 
-  console.log(params[0]);
-
   useEffect(() => {
     if (params[0]) {
       setSearchParams({ local: params[0] ? params[0][1] : '' });

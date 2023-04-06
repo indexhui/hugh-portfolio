@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   Flex,
   Text,
@@ -34,6 +36,7 @@ import walk from 'assets/images/crosspoint/walk.gif';
 import squat from 'assets/images/crosspoint/squat.gif';
 
 const Solution01 = () => {
+  const { t } = useTranslation();
   return (
     <Flex w="100%" direction="column" align="center">
       <HStack w="100%" align="center" pb="20px">
@@ -49,7 +52,7 @@ const Solution01 = () => {
           01
         </Flex>
         <Text textStyle="title1" color="white">
-          介面層級梳理與優化
+          {t('cpSolution01Title')}
         </Text>
       </HStack>
       <Stack
@@ -69,7 +72,7 @@ const Solution01 = () => {
           color="whiteAlpha.900"
           w={{ base: '100%', md: '45%' }}
         >
-          將介面上的資訊，將資訊劃分成操作層和顯示層，操作層布局為產品識別、階段提示、操作按鈕固定於介面下方。顯示層為主要與檢測者引導以及互動反饋。
+          {t('cpSolution01Intro')}
         </Text>
       </Stack>
       <SimpleGrid
@@ -89,7 +92,7 @@ const Solution01 = () => {
               align="center"
               px="20px"
             >
-              <Text color="white">資訊層</Text>
+              <Text color="white"> {t('cpSolution01Intro_02')}</Text>
             </Flex>
             <Flex
               bgColor="rgba(255,255,255,0.5)"
@@ -99,7 +102,7 @@ const Solution01 = () => {
               align="center"
               px="20px"
             >
-              <Text color="blue.800">操作層</Text>
+              <Text color="blue.800"> {t('cpSolution01Intro_03')}</Text>
             </Flex>
           </VStack>
         </AspectRatio>
@@ -121,7 +124,7 @@ const Solution01 = () => {
             bg: 'blue.400',
           }}
         >
-          準備頁面為增強沉境感，提升檢測者的專注力，減去準備階段不需要的資訊，以品牌延伸色作為背景色大面積使用，讓使用聚焦於畫面中心。
+          {t('cpSolution01Intro_01')}
         </Highlight>
       </Text>
       <SimpleGrid
@@ -149,7 +152,7 @@ const Solution01 = () => {
                 rounded="md"
               >
                 <Text textStyle="title0" color="blue.800">
-                  顯示層
+                  顯示層{t('cpSolution01Intro_04')}
                 </Text>
               </Flex>
               <Flex

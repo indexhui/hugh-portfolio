@@ -48,11 +48,11 @@ const RedesignIntro = () => {
         >
           <VStack>
             <SkeletonImage src={redesign01} rounded="md" />
-            <Text color="whiteAlpha.800">靜態評估</Text>
+            <Text color="whiteAlpha.800">{t('cpStaticDetection')}</Text>
           </VStack>
           <VStack>
             <SkeletonImage src={redesign02} rounded="md" />
-            <Text color="whiteAlpha.800">分析報告</Text>
+            <Text color="whiteAlpha.800"> {t('cpAnalysisReport')}</Text>
           </VStack>
         </SimpleGrid>
       </VStack>

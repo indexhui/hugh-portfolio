@@ -1,5 +1,3 @@
-import { Flex, Text } from '@chakra-ui/react';
-
 import IntroSection from 'components/layouts/IntroSection';
 import OverviewSection from 'components/layouts/OverviewSection';
 

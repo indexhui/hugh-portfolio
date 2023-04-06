@@ -11,6 +11,7 @@ const aboutPage = {
   aboutIntro04: '除了設計也喜歡接觸各領域的專業，並運用在工作與生活上。',
   valueTitle01: '發揮想像力',
   valueTitle02: '保持好奇心',
+  valueTitle03: '換位思考力',
   value01:
     '不設限的發揮想像力，發想設計的可能性，更能幫助我在各個領域，適當地去提供新的機會運用。',
   value02: '隨時有新的領域與挑戰，好奇心讓我能保持學習',
@@ -76,6 +77,7 @@ const workPage = {
   project01Content:
     'Crosspoint 透過攝影機捕捉人體動態變化搭配 AI 影像分析， 提供健身與復健場域，利用 AI 姿勢評估檢測系統，去了解運動時身體平衡差異與肌肉緊繃概況，讓教練以資訊視覺化圖像來提供會員建議。',
   project02Title: 'Link-in-Bio 輕型個人網站 MVP',
+  project02Tag: '創作者工具, Web app',
   project02Subtitle: 'Portaly 傳送門',
   project02Tag: '創作者工具, Web app',
   project02Content:
@@ -131,6 +133,31 @@ const crosspoint = {
   cpRedesignAfter: 'Redesign',
   cpStaticDetection: '靜態檢測',
   cpAnalysisReport: '分析報告',
+  cpProblemDiscoverContent:
+    '我們進駐了合作健身房，進入服務場域進行用戶研究來定義核心的用戶問題，以及更了解健身房、教練、民眾是如何去理解我們的產品。',
+  cpProblemDefineTitle01: '檢測服務過程不順暢',
+  cpProblemDefineTitle02: '分析報告對於健身教練不易說明',
+  cpProblemDefineTitle03: '報告內容對民眾過於抽象',
+  cpProblemDefineTitle04: '帶給健身房什麼價值',
+  cpProblemDefineContent01:
+    '操作介面層級凌亂，按鈕用語不夠明確，導致操作人員常常尋找按鈕，甚至誤觸導致檢測頻繁中斷。在營業時段或展覽會場會嚴重影響體驗品質。',
+  cpProblemDefineContent02:
+    '當前版本報告結果是按照上海康復手冊所設計，但對於不同醫療集團與健身教練來說，不夠通用與解讀。',
+  cpProblemDefineContent03:
+    '報告呈現只呈現數值，民眾難以理解數值對應自己身體表現的意義。',
+  cpProblemDefineContent04:
+    '最初與上海康復中心所合作滿足當下需求。而如何帶給其他健身房與康復廠館價值也成為納入改版考量。',
+  cpSolution01Title: '介面層級梳理與優化',
+  cpSolution01Intro:
+    '將介面上的資訊，將資訊劃分成操作層和顯示層，操作層布局為產品識別、階段提示、操作按鈕固定於介面下方。顯示層為主要與檢測者引導以及互動反饋。',
+  cpSolution01Intro_01:
+    '準備頁面為增強沉境感，提升檢測者的專注力，減去準備階段不需要的資訊，以品牌延伸色作為背景色大面積使用，讓使用聚焦於畫面中心。',
+  cpSolution01Intro_02: '資訊層',
+  cpSolution01Intro_03: '操作層',
+  cpSolution01Intro_04: '顯示層',
+  cpSolution01Intro_05:
+    '檢測環節，攝影機擷取畫面正對使用者，如同鏡子一般的反饋讓使用者確認動作，但在研究觀察中，全螢幕的擷取畫面會讓使用者被周邊環境分散專注力。將擷取畫面縮減至畫面約 1/3，讓受測者可以專注在正前方如同全身鏡。',
+  cpSolution02Intro_01: '新增引導階段，以動畫輔助說明',
 };
 
 export const localZh = {

@@ -63,7 +63,7 @@ const ProjectCard = props => {
           <Text textStyle="text03">{t(props.title)}</Text>
         </VStack>
         <Text textStyle="text04" color="blue.700">
-          {props.tag}
+          {t(props.tag)}
         </Text>
         <Text textStyle="text04">{t(props.content)}</Text>
         <Text>{isNeedPassword ? '需要密碼' : ''}</Text>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   Flex,
   Text,
@@ -14,28 +15,27 @@ import discover02 from 'assets/images/crosspoint/discover02.jpg';
 
 const problemList = [
   {
-    title: '檢測服務過程不順暢',
-    content:
-      '由於介面操作層級凌亂，按鈕用語不夠明確，導致操作人員常常尋找操作按鈕，甚至誤觸導致檢測頻繁中斷。在人潮密集的營業時段或展覽會場會嚴重影響體驗品質。',
+    title: 'cpProblemDefineTitle01',
+    content: 'cpProblemDefineContent01',
   },
   {
-    title: '分析報告對於健身教練不易說明',
-    content:
-      '當前版本報告結果是按照上海康復手冊所設計，但對於不同醫療集團與健身教練來說，不夠通用與解讀。',
+    title: 'cpProblemDefineTitle02',
+    content: 'cpProblemDefineContent02',
   },
   {
-    title: '報告內容對民眾過於抽象',
-    content: '報告呈現只呈現數值，民眾難以理解數值對應自己身體表現的意義。',
+    title: 'cpProblemDefineTitle03',
+    content: 'cpProblemDefineContent03',
   },
   {
-    title: '帶給健身房什麼價值',
-    content:
-      '最初與上海康復中心所合作滿足當下需求。而如何帶給其他健身房與康復廠館價值也成為納入改版考量。',
+    title: 'cpProblemDefineTitle04',
+    content: 'cpProblemDefineContent04',
   },
 ];
 
 const ProblemCard = props => {
   const { order, title, content } = props;
+  const { t } = useTranslation();
+
   return (
     <VStack align="flex-start">
       <HStack>
@@ -50,14 +50,16 @@ const ProblemCard = props => {
         >
           {'0' + order}
         </Flex>
-        <Text textStyle="title1">{title}</Text>
+        <Text textStyle="title1">{t(title)}</Text>
       </HStack>
-      <Text textStyle="text02">{content}</Text>
+      <Text textStyle="text02">{t(content)}</Text>
     </VStack>
   );
 };
 
 const Problem = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Container py="40px" bgColor="grey.300">
@@ -70,7 +72,7 @@ const Problem = () => {
         >
           <GridItem colSpan={2}>
             <Text textStyle="text01" pb="10px">
-              在專案前期我們進駐了合作健身房，進入服務場域進行用戶研究來定義核心的用戶問題，以及更了解健身房、教練、民眾是如何去理解我們的產品。
+              {t('cpProblemDiscoverContent')}
             </Text>
             <SkeletonImage rounded="md" src={discover01} />
           </GridItem>

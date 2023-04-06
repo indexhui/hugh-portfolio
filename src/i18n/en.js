@@ -83,8 +83,8 @@ Collaborated with partners and companies such as Women's Way, Taiwan Bar, UX des
   project01Content:
     'Crosspoint captures body motion changes through cameras and uses AI image analysis to provide fitness and rehabilitation fields. By utilizing an AI posture assessment detection system, it understands the differences in body balance and muscle tension during exercise. This allows coaches to provide member recommendations through information visualization images.',
   project02Title: 'Link-in-Bio tool MVP',
+  project02Tag: 'Tools for creators, Web app',
   project02Subtitle: 'Portaly',
-  project02Tag: 'Creator tools,Web app',
   project02Content: `Provide creators with a low-cost and user-friendly personal page building tool, which amplifies the visual appeal of their content and increases opportunities for clicks and interaction. Through the 'Portaly Gateway,' audiences can reach their favorite creators and expand the influence of their work.`,
   project03Title: 'Real Engine',
   project03Subtitle: 'IP Creator Board Game Crowdfunding Platform 0-1',
@@ -139,8 +139,29 @@ const crosspoint = {
     'The testing system MVP was originally built as a service for specific rehabilitation facilities, even though rehabilitation practitioners familiar with the operation of the product had many ease of use issues and a confusing information structure that needed to be re-engineered',
   cpRedesignBefore: 'MVP',
   cpRedesignAfter: 'Redesign',
-  cpStaticDetection: '靜態檢測',
-  cpAnalysisReport: '分析報告',
+  cpStaticDetection: 'Static Detection',
+  cpAnalysisReport: 'Analysis Report',
+  cpProblemDiscoverContent:
+    'We have moved into a cooperative gym to conduct user research within the service domain in order to define core user issues and gain a better understanding of how the gym, coaches, and public perceive our product.',
+  cpProblemDefineTitle01: 'Service process is not smooth.',
+
+  cpProblemDefineTitle02:
+    'Analysis report is not easy for fitness trainers to explain.',
+  cpProblemDefineTitle03:
+    'content of the report is too abstract for the general public',
+  cpProblemDefineTitle04: 'What value does it provide for the gym?',
+  cpProblemDefineContent01:
+    'The interface is disorganized and the button language is not clear enough, which often leads to operators searching for buttons or even accidentally touching them, resulting in frequent interruptions during testing. This will seriously affect the user experience during business hours or at exhibition venues.',
+  cpProblemDefineContent02:
+    'The current version of the report is designed based on the Shanghai Rehabilitation Handbook, but it is not widely applicable or easy to interpret for different medical groups and fitness trainers.',
+  cpProblemDefineContent03:
+    'Presenting only numbers in a report makes it difficult for the public to understand the significance of the numbers in relation to their own physical performance.',
+  cpProblemDefineContent04:
+    'Initially, we collaborated with Shanghai Rehabilitation Center to meet current needs. However, how to bring value to other fitness centers and rehabilitation facilities has also been taken into consideration for the inclusion in the revised version.',
+  cpSolution01Title: 'Interface-level organization and optimization',
+  cpSolution01Intro:
+    'The information on the interface is divided into operation layer and display layer. The operation layer is designed with product identification, stage prompts, and operation buttons fixed at the bottom of the interface. The display layer is primarily for guiding the examiner and providing interactive feedback.',
+  cpSolution01Intro_01: `The preparation page is designed to enhance the sense of immersion, increase the examiner's concentration, and eliminate unnecessary information during the preparation stage. The brand's extended color is used as the background color in a large area to allow the user to focus on the center of the screen.`,
 };
 
 export const localEn = {
