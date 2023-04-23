@@ -16,6 +16,14 @@ const aboutPage = {
     'Having new fields and challenges at any time, curiosity enables me to maintain learning.',
   valueTitle03: 'Empathy',
   value03: `Regardless of whether it is a partner or a user, each has a unique background and different thinking patterns and considerations. Putting oneself in the other's shoes can help me communicate with partners and understand the users of the product.`,
+  ex05Name: 'Titansoft',
+  ex05Company: 'Titansoft',
+  ex05Title: 'Product Designer',
+  ex05Content01:
+    'Clarifying requirements starting from strategic planning to product development.',
+  ex05Content02:
+    'Discussion on interface flow design and establishment of design specifications.',
+  ex05Content03: 'Vue front-end design and development.',
   ex01Company: ' The Z Institute  blockchain incubator',
   ex01Title: 'Front-end',
   ex01Content01_1: 'Creating',

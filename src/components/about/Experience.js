@@ -21,6 +21,26 @@ import institute from 'assets/images/about/institute.jpg';
 import real from 'assets/images/about/real.jpg';
 import crosspoint from 'assets/images/about/crosspoint.jpg';
 import sov from 'assets/images/about/sov.jpg';
+import titansoft from 'assets/images/about/titansoft.jpg';
+
+const TitansoftContent = () => {
+  const { t } = useTranslation();
+  return (
+    <VStack align="flex-start" w="100%" pt="12px" spacing="0px">
+      <UnorderedList>
+        <ListItem textStyle="text02">
+          <Span>{t('ex05Content01')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Span>{t('ex05Content02')}</Span>
+        </ListItem>
+        <ListItem textStyle="text02">
+          <Span>{t('ex05Content03')}</Span>
+        </ListItem>
+      </UnorderedList>
+    </VStack>
+  );
+};
 
 const InstituteContent = () => {
   const { t } = useTranslation();
@@ -180,6 +200,15 @@ const SovContent = () => {
 };
 
 const experienceList = [
+  {
+    image: titansoft,
+    company: 'ex05Company',
+    title: 'ex05Title',
+    time: 'May 2023 - Present',
+    isDesign: true,
+    tag: ['Web', 'Vue'],
+    content: <TitansoftContent />,
+  },
   {
     image: institute,
     company: 'ex01Company',

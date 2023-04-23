@@ -17,7 +17,13 @@ const aboutPage = {
   value02: '隨時有新的領域與挑戰，好奇心讓我能保持學習',
   value03:
     '無論是夥伴或是使用者，各自有獨特背景而有不同思考模式與考量，換位思考幫助我與夥伴溝通以及了解產品的使用者。',
-  ex01Name: 'The Z Institute 區塊鏈線上學院',
+
+  ex05Company: 'Titansoft 鈦坦科技',
+  ex05Title: '產品設計',
+  ex05Content01: '釐清需求從策略規劃產品',
+  ex05Content02: '介面流程設計、設計規範制定討論',
+  ex05Content03: 'Vue 前端設計開發',
+  ex0Company: 'The Z Institute 區塊鏈線上學院',
   ex01Title: '前端工程師',
   ex01Content01_1: '製作',
   ex01Content01_2: '互動式特效官網',
